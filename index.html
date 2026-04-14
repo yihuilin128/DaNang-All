@@ -473,20 +473,15 @@
   }
   .overview-bg-circle {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    right: 0; top: 0;
+    width: 100%; height: 100%;
     pointer-events: none;
     z-index: 0;
   }
-  /* 大圓 — 右/上/下 三邊裁切，z-index 最高 */
   .overview-circle-big {
     position: absolute;
-    right: -35px;
-    top: -22px;
-    width: 180px;
-    height: 180px;
+    right: -35px; top: -22px;
+    width: 180px; height: 180px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(196,150,26,0.55);
@@ -494,20 +489,14 @@
     z-index: 2;
   }
   .overview-circle-big img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    opacity: 0.92;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block; opacity: 0.92;
   }
-  /* 小圓 — 緊靠大圓左側，壓在大圓下層 */
   .overview-circle-small {
     position: absolute;
-    right: 118px;
-    top: 42px;
-    width: 100px;
-    height: 100px;
+    right: 118px; top: 42px;
+    width: 100px; height: 100px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(196,150,26,0.35);
@@ -515,12 +504,9 @@
     z-index: 1;
   }
   .overview-circle-small img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    opacity: 0.85;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block; opacity: 0.85;
   }
   .overview-title {
     font-family: 'Noto Serif TC', serif;
@@ -863,12 +849,10 @@
     opacity: 0.5;
     mix-blend-mode: luminosity;
   }
-  /* ensure text above circle */
   .day-num, .day-main-title, .day-subtitle, .day-meals-strip {
     position: relative;
     z-index: 1;
   }
-
   /* ── SPOT CARD: LEFT IMAGE RIGHT TEXT ── */
   .spot-card-inner {
     display: flex;
@@ -1001,7 +985,7 @@
     <!-- ══ DAY 1 ══ -->
     <div id="screen-day1" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/day1-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/day1-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">DAY 1 · 4月25日（六）</div>
         <div class="day-main-title">抵達峴港<br>探索城市地標</div>
         <div class="day-subtitle"><i class="fa-solid fa-plane-arrival" style="color:var(--gold);margin-right:4px"></i>桃園機場 → 峴港機場</div>
@@ -1098,7 +1082,7 @@
     <!-- ══ DAY 2 ══ -->
     <div id="screen-day2" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/day2-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/day2-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">DAY 2 · 4月26日（日）</div>
         <div class="day-main-title">會安古鎮<br>迦南島生態體驗</div>
         <div class="day-subtitle"><i class="fa-solid fa-landmark" style="color:var(--gold);margin-right:4px"></i>UNESCO 世界文化遺產 × 竹籃船體驗</div>
@@ -1172,41 +1156,13 @@
           <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>Hoiana Resort & Golf, Hoi An</div>
         </div>
       </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-utensils"></i></div>
-          <div class="section-title">會安在地美食推薦</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-banh-mi.jpg" alt="法國麵包 Bánh Mì Phượng" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-bread-slice"></i>法國麵包 Bánh Mì Phượng</div><div class="spot-desc">米其林必比登推薦！被評為「全球最好吃的越南法國麵包」之一，外皮酥脆、內餡豐富，有多種口味可選。在地人與觀光客都大排長龍，來會安絕對不能錯過！</div><a class="map-btn" href="https://maps.app.goo.gl/A1Pxsqi9JUdDJebx6" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-pho-com-linh.jpg" alt="越南河粉 Phở Cơm Linh" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-bowl-food"></i>越南河粉 Phở Cơm Linh</div><div class="spot-desc">網紅推薦的會安在地越南料理餐廳，供應正宗越南河粉、米飯與各式家常菜，份量紮實、價格實惠，深受當地人喜愛。</div><a class="map-btn" href="https://maps.app.goo.gl/tAHLi18RXpJwo84a8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-egg-coffee.jpg" alt="蛋咖啡 Uncle Huan Coffee" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-mug-hot"></i>蛋咖啡 Uncle Huan Coffee</div><div class="spot-desc">越南特色蛋咖啡（Cà Phê Trứng），以濃縮咖啡搭配打發蛋黃奶霜製成，口感濃郁綿密，是近年風靡全東南亞的網紅飲品，來了不喝可惜！</div><a class="map-btn" href="https://maps.app.goo.gl/2smL1y5qGVq6rhiN8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-      </div>
       <div class="bottom-spacer"></div>
     </div>
 
     <!-- ══ DAY 3 ══ -->
     <div id="screen-day3" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/day3-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/day3-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">DAY 3 · 4月27日（一）</div>
         <div class="day-main-title">巴拿山纜車<br>黃金橋 × 夢想樂園</div>
         <div class="day-subtitle"><i class="fa-solid fa-cable-car" style="color:var(--gold);margin-right:4px"></i>金氏世界紀錄纜車 × 雲端黃金橋</div>
@@ -1261,35 +1217,6 @@
       </div>
       <div class="content-section">
         <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-utensils"></i></div>
-          <div class="section-title">巴拿山午餐推薦（自理）</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-starbucks-bana.jpg" alt="Starbucks Ba Na Hills" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-coffee"></i>Starbucks Ba Na Hills</div><div class="spot-desc">坐在雲端星巴克喝咖啡，居高臨下俯瞰山谷，氣氛絕佳！可享用飲品與輕食，順便在法國村廣場旁拍美照。</div><a class="map-btn" href="https://maps.app.goo.gl/G7fKWNjRL8XyGED37" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-gemination.jpg" alt="義大利麵 Gemination" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-plate-wheat"></i>義大利麵 Gemination</div><div class="spot-desc">巴拿山上的義大利料理餐廳，提供義大利麵、燉飯等西式料理，環境舒適，適合想吃輕食的旅客，是法國村內用餐的好選擇。</div><a class="map-btn" href="https://maps.app.goo.gl/N14RXsVSB3HWjDyM9" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img class="spot-thumb" src="photo/spot-pizza-brasserie.jpg" alt="Pizza Brasserie" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-pizza-slice"></i>Pizza Brasserie</div><div class="spot-desc">巴拿山法國村內的披薩餐廳，提供現烤披薩與各式西式簡餐，適合一家大小，在玩樂之餘補充體力的好選擇。</div><a class="map-btn" href="https://maps.app.goo.gl/vgzw2DEnKsVA4QBz8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
           <div class="section-icon"><i class="fa-solid fa-person-skiing"></i></div>
           <div class="section-title">高山滑車 Alpine Coaster 攻略</div>
           <div class="section-line"></div>
@@ -1334,13 +1261,14 @@
           </div>
         </div>
       </div>
+
       <div class="bottom-spacer"></div>
     </div>
 
     <!-- ══ DAY 4 ══ -->
     <div id="screen-day4" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/day4-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/day4-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">DAY 4 · 4月28日（二）</div>
         <div class="day-main-title">五行山<br>購物 & 美溪沙灘</div>
         <div class="day-subtitle"><i class="fa-solid fa-mountain" style="color:var(--gold);margin-right:4px"></i>韓江市場 × VINCOM PLAZA × 烤肉吃到飽</div>
@@ -1418,7 +1346,7 @@
     <!-- ══ DAY 5 ══ -->
     <div id="screen-day5" class="screen">
       <div class="day-hero" style="background: linear-gradient(135deg,#2C2416,#1A1410);">
-        <div class="hero-circle-img"><img src="photo/day5-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/day5-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">DAY 5 · 4月29日（三）</div>
         <div class="day-main-title">自由時光<br>返程桃園</div>
         <div class="day-subtitle"><i class="fa-solid fa-plane-departure" style="color:var(--gold);margin-right:4px"></i>峴港機場 → 桃園機場</div>
@@ -1468,7 +1396,7 @@
     <!-- ══ OPTIONAL ══ -->
     <div id="screen-optional" class="screen">
       <div class="day-hero" style="background: linear-gradient(135deg,#2C1F08,#1A1410);">
-        <div class="hero-circle-img"><img src="photo/optional-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/optional-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num"><i class="fa-solid fa-tag" style="margin-right:5px"></i>自費行程</div>
         <div class="day-main-title">可選自費項目</div>
         <div class="day-subtitle">以下費用均不含在團費中，請自行決定是否參加</div>
@@ -1534,174 +1462,6 @@
       </div>
 
       <!-- SPA 推薦 -->
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-spa"></i></div>
-          <div class="section-title">精選 SPA 推薦（自行前往）</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="price-note"><i class="fa-solid fa-circle-info"></i>以下 SPA 為自行推薦，非旅行社安排。匯率參考：1 TWD ≈ 750 VND</div>
-
-        <!-- SPA 1: Golden Lotus -->
-        <div class="spa-card">
-          <div class="spa-header">
-            <div class="spa-name"><i class="fa-solid fa-spa" style="margin-right:6px;font-size:13px"></i>Golden Lotus Oriental Organic Spa</div>
-            <div class="spa-meta"><i class="fa-solid fa-location-dot"></i>209 Trần Phú &amp; 63 Hà Bổng，峴港</div>
-            <div class="spa-meta"><i class="fa-solid fa-clock"></i>營業時間 09:00–22:00</div>
-          </div>
-          <div class="spa-body">
-            <table class="spa-table">
-              <thead>
-                <tr>
-                  <th>按摩項目</th>
-                  <th style="text-align:center">60 分</th>
-                  <th style="text-align:right">90 分</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Body Massage<br><span style="font-size:11px;color:var(--text3)">招牌・無油</span></td>
-                  <td style="text-align:center"><span class="tw-price">NT$520</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$653</span></td>
-                </tr>
-                <tr>
-                  <td>Aromatherapy<br><span style="font-size:11px;color:var(--text3)">精油按摩</span></td>
-                  <td style="text-align:center"><span class="tw-price">NT$520</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$653</span></td>
-                </tr>
-                <tr>
-                  <td>Hot Stone Relief<br><span style="font-size:11px;color:var(--text3)">熱石按摩</span></td>
-                  <td style="text-align:center"><span class="tw-price">NT$573</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$707</span></td>
-                </tr>
-                <tr>
-                  <td>Herbal Ball<br><span style="font-size:11px;color:var(--text3)">藥草球按摩</span></td>
-                  <td style="text-align:center"><span class="tw-price">NT$653</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$787</span></td>
-                </tr>
-                <tr>
-                  <td>Foot Massage<br><span style="font-size:11px;color:var(--text3)">足部按摩</span></td>
-                  <td style="text-align:center"><span class="tw-price">NT$387</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$520</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="spa-tip"><i class="fa-solid fa-triangle-exclamation"></i>以上價格<strong>不含服務費</strong>，60分鐘另加約 NT$93、90分鐘另加約 NT$120–133。官網另有 90 分鐘 30% 折扣優惠，預訂前可留意。</div>
-            <div class="spa-actions">
-              <a class="map-btn" href="https://maps.app.goo.gl/Z2Phu7budoaJcvjH9" target="_blank"><i class="fa-solid fa-map-location-dot"></i>分店1地圖</a>
-              <a class="map-btn" href="https://maps.app.goo.gl/pFT9kJYczFjy5hdY7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>分店2地圖</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SPA 2: Charm Spa -->
-        <div class="spa-card">
-          <div class="spa-header">
-            <div class="spa-name"><i class="fa-solid fa-spa" style="margin-right:6px;font-size:13px"></i>Charm Spa Grand Da Nang</div>
-            <div class="spa-meta"><i class="fa-solid fa-location-dot"></i>36 Thái Phiên &amp; 283 Nguyễn Chí Thanh，峴港</div>
-            <div class="spa-meta"><i class="fa-solid fa-clock"></i>營業時間 09:00–23:00</div>
-          </div>
-          <div class="spa-body">
-            <div class="price-note" style="margin-bottom:8px"><i class="fa-solid fa-circle-info"></i>以下為估算價格，正式消費前建議電話確認</div>
-            <table class="spa-table">
-              <thead>
-                <tr>
-                  <th>按摩項目</th>
-                  <th style="text-align:right">60／90 分鐘</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Vietnamese Traditional<br><span style="font-size:11px;color:var(--text3)">傳統越南按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$533–667</span></td>
-                </tr>
-                <tr>
-                  <td>Swedish<br><span style="font-size:11px;color:var(--text3)">瑞典式按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$573–707</span></td>
-                </tr>
-                <tr>
-                  <td>Aromatherapy<br><span style="font-size:11px;color:var(--text3)">精油香薰按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$600–733</span></td>
-                </tr>
-                <tr>
-                  <td>Thai Therapy<br><span style="font-size:11px;color:var(--text3)">泰式按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$600–773</span></td>
-                </tr>
-                <tr>
-                  <td>Deep Tissue<br><span style="font-size:11px;color:var(--text3)">深層組織按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$600–733</span></td>
-                </tr>
-                <tr>
-                  <td>Hot Stone<br><span style="font-size:11px;color:var(--text3)">熱石按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$640–800</span></td>
-                </tr>
-                <tr>
-                  <td>Herbal Therapy<br><span style="font-size:11px;color:var(--text3)">藥草球按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$667–827</span></td>
-                </tr>
-                <tr>
-                  <td>Bamboo Cane <span style="font-size:11px;color:var(--text3)">（90分）</span><br><span style="font-size:11px;color:var(--text3)">竹管按摩</span></td>
-                  <td style="text-align:right"><span class="tw-price">NT$800–933</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="spa-tip"><i class="fa-solid fa-tag"></i>網站標示最高可享 <strong>55% 折扣優惠</strong>，預訂前請先確認最新價格。</div>
-            <div class="spa-actions">
-              <a class="map-btn" href="https://maps.app.goo.gl/z9hAJySYtwbBMSQz5" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a>
-              <a class="call-btn" href="tel:+840939682244"><i class="fa-solid fa-phone"></i>+84-0939-682-244</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SPA 3: Huong Tram -->
-        <div class="spa-card">
-          <div class="spa-header">
-            <div class="spa-name"><i class="fa-solid fa-spa" style="margin-right:6px;font-size:13px"></i>Hương Tràm Spa</div>
-            <div class="spa-meta"><i class="fa-solid fa-location-dot"></i>186 Hồ Nghinh，山茶區（Sơn Trà），峴港</div>
-            <div class="spa-meta"><i class="fa-solid fa-clock"></i>營業時間 10:00–23:00</div>
-          </div>
-          <div class="spa-body">
-            <div class="price-note" style="margin-bottom:8px"><i class="fa-solid fa-circle-info"></i>結合傳統越南、泰式、熱石及日式指壓多種技法。以下為估算價格</div>
-            <table class="spa-table">
-              <thead>
-                <tr>
-                  <th>按摩項目</th>
-                  <th style="text-align:center">時長</th>
-                  <th style="text-align:right">台幣約</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Body + Hot Stone<br><span style="font-size:11px;color:var(--text3)">全身 + 熱石</span></td>
-                  <td style="text-align:center;color:var(--text3);font-size:11px">60 分</td>
-                  <td style="text-align:right"><span class="tw-price">NT$587</span></td>
-                </tr>
-                <tr>
-                  <td>Body Massage<br><span style="font-size:11px;color:var(--text3)">全身按摩</span></td>
-                  <td style="text-align:center;color:var(--text3);font-size:11px">60 分</td>
-                  <td style="text-align:right"><span class="tw-price">NT$533–667</span></td>
-                </tr>
-                <tr>
-                  <td>Foot Massage<br><span style="font-size:11px;color:var(--text3)">足部按摩</span></td>
-                  <td style="text-align:center;color:var(--text3);font-size:11px">60 分</td>
-                  <td style="text-align:right"><span class="tw-price">NT$467–600</span></td>
-                </tr>
-                <tr>
-                  <td>全身套餐<br><span style="font-size:11px;color:var(--text3)">含足浴・肩頸・熱石</span></td>
-                  <td style="text-align:center;color:var(--text3);font-size:11px">90 分</td>
-                  <td style="text-align:right"><span class="tw-price">NT$800–1,000</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="spa-tip"><i class="fa-solid fa-circle-info"></i>Foody 上登記人均消費約 NT$533–2,000，建議提前電話預訂，旺季位置緊張。</div>
-            <div class="spa-actions">
-              <a class="map-btn" href="https://maps.app.goo.gl/6uKNHrgKNKh7sj3x8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>分店1地圖</a>
-              <a class="map-btn" href="https://maps.app.goo.gl/DtsUaHuHC1uwr28JA" target="_blank"><i class="fa-solid fa-map-location-dot"></i>分店2地圖</a>
-              <a class="call-btn" href="tel:+842362228777"><i class="fa-solid fa-phone"></i>+84-236-222-8777</a>
-            </div>
-          </div>
-        </div>
-
       </div>
       <div class="bottom-spacer"></div>
     </div>
@@ -1709,7 +1469,7 @@
     <!-- ══ CONTACT ══ -->
     <div id="screen-contact" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/contact-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/contact-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">緊急聯絡</div>
         <div class="day-main-title">車隊領隊<br>服務窗口</div>
         <div class="day-subtitle"><i class="fa-solid fa-headset" style="color:var(--gold);margin-right:4px"></i>旅途中有任何問題，請直接聯繫</div>
@@ -1824,7 +1584,7 @@
     <!-- ══ NOTES ══ -->
     <div id="screen-notes" class="screen">
       <div class="day-hero">
-        <div class="hero-circle-img"><img src="photo/notes-hero.jpg" alt="" onerror="this.style.opacity='0'"></div>
+        <div class="hero-circle-img"><img src="photo/notes-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
         <div class="day-num">行前準備</div>
         <div class="day-main-title">重要提醒<br>旅遊貼心小叮嚀</div>
         <div class="day-subtitle"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:4px"></i>出發前請務必確認以下事項</div>
