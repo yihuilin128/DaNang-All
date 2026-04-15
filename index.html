@@ -871,6 +871,140 @@
     flex: 1;
     min-width: 0;
   }
+
+  .member-card {
+    background: var(--white);
+    border: 1px solid #EDE3CC;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 12px rgba(139,105,20,0.08);
+  }
+  .member-header {
+    background: var(--dark2);
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .member-avatar {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: #C4961A;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 500;
+    color: var(--dark); flex-shrink: 0;
+    font-family: 'Noto Serif TC', serif;
+  }
+  .member-name {
+    font-size: 17px; font-weight: 500;
+    color: #F5E9C8;
+    font-family: 'Noto Serif TC', serif;
+  }
+  .member-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .member-cell {
+    padding: 12px 16px;
+    border-bottom: 0.5px solid #F0E8D0;
+    border-right: 0.5px solid #F0E8D0;
+  }
+  .member-cell:nth-child(even) { border-right: none; }
+  .member-cell-full {
+    padding: 12px 16px;
+    border-bottom: 0.5px solid #F0E8D0;
+    grid-column: 1 / -1;
+  }
+  .member-cell:last-child, .member-cell-full:last-child { border-bottom: none; }
+  .mc-label {
+    font-size: 11px; color: var(--text3);
+    letter-spacing: 0.5px; margin-bottom: 5px;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .mc-label i { font-size: 11px; color: var(--gold); }
+  .mc-val { font-size: 20px; font-weight: 500; color: var(--gold); }
+  .mc-val-sm { font-size: 14px; font-weight: 500; color: var(--text); }
+  .shuttle-tag {
+    display: inline-block;
+    font-size: 12px; font-weight: 500;
+    padding: 3px 12px; border-radius: 20px;
+    margin-right: 8px;
+  }
+  .tag-yes { background: #E1F5EE; color: #0F6E56; }
+  .tag-no  { background: #F1EFE8; color: #5F5E5A; }
+  .not-found-card {
+    background: var(--white);
+    border: 1px solid #EDE3CC;
+    border-radius: var(--radius);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--text2);
+    font-size: 14px;
+  }
+  .not-found-card i { font-size: 32px; color: var(--text3); display: block; margin-bottom: 10px; }
+  .multi-item {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--white);
+    border: 1px solid #EDE3CC;
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .multi-item:active { transform: scale(0.98); }
+  .multi-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--dark2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 500;
+    color: var(--gold); flex-shrink: 0;
+  }
+  .multi-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .multi-info { font-size: 12px; color: var(--text3); margin-top: 2px; }
+
+
+  /* ── LOOKUP SCREEN ── */
+  .lookup-hero{background:var(--dark2);padding:20px 20px 16px;position:relative;overflow:hidden}
+  .lookup-search-wrap{padding:16px 16px 0}
+  .lookup-input-row{display:flex;gap:8px;margin-bottom:0}
+  .lookup-input{flex:1;height:44px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(--radius);background:var(--white);color:var(--text);outline:none;font-family:'Noto Sans TC',sans-serif}
+  .lookup-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,150,26,0.12)}
+  .lookup-btn{height:44px;padding:0 18px;background:var(--gold);color:var(--dark);font-size:14px;font-weight:500;border:none;border-radius:var(--radius);cursor:pointer;font-family:'Noto Sans TC',sans-serif;flex-shrink:0}
+  .lookup-btn:active{transform:scale(0.97)}
+  .lookup-result{padding:14px 16px 0}
+  .lcard{background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 14px rgba(139,105,20,0.08)}
+  .lcard-header{background:#2C2416;padding:14px 16px;display:flex;align-items:center;gap:12px}
+  .lcard-avatar{width:44px;height:44px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:var(--dark);flex-shrink:0;font-family:'Noto Serif TC',serif}
+  .lcard-name{font-size:18px;font-weight:500;color:#F5E9C8;font-family:'Noto Serif TC',serif}
+  .lcard-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #EDE3CC}
+  .lcard-cell{padding:12px 14px;border-right:1px solid #EDE3CC;border-bottom:1px solid #EDE3CC}
+  .lcard-cell:nth-child(even){border-right:none}
+  .lcard-cell:nth-last-child(-n+2){border-bottom:none}
+  .lcard-cell-full{grid-column:1/-1;padding:12px 14px;border-bottom:1px solid #EDE3CC}
+  .lcard-cell-full:last-child{border-bottom:none}
+  .lcell-label{font-size:11px;color:var(--text3);letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}
+  .lcell-val{font-size:22px;font-weight:700;color:var(--gold)}
+  .lcell-val-sm{font-size:14px;font-weight:500;color:var(--text)}
+  .lcell-airline{display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);color:var(--gold-dark);border:1px solid #E8C85A;border-radius:20px;font-size:13px;font-weight:500;padding:4px 12px;margin-top:2px}
+  .shuttle-row2{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid #EDE3CC}
+  .shuttle-row2:last-child{border-bottom:none}
+  .shuttle-label2{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:6px}
+  .shuttle-label2 i{color:var(--gold);font-size:12px;width:14px;text-align:center}
+  .stag-yes{background:#E1F5EE;color:#0F6E56;font-size:12px;font-weight:500;padding:3px 10px;border-radius:20px}
+  .stag-no{background:#F1EFE8;color:#5F5E5A;font-size:12px;padding:3px 10px;border-radius:20px}
+  .gather-box{background:#FFF8E8;border:1px solid #E8C85A;border-radius:var(--radius-sm);padding:11px 14px;margin:10px 16px 0;display:flex;gap:9px;align-items:flex-start}
+  .gather-box i{color:var(--gold-dark);flex-shrink:0;margin-top:2px;font-size:14px}
+  .gather-text{font-size:13px;color:#7A5C10;line-height:1.7}
+  .gather-text strong{color:#5A420A}
+  .lmulti{display:flex;flex-direction:column;gap:8px}
+  .lmulti-card{background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer}
+  .lmulti-card:active{transform:scale(0.98)}
+  .lmulti-av{width:36px;height:36px;border-radius:50%;background:#2C2416;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--gold);flex-shrink:0}
+  .lmulti-name{font-size:14px;font-weight:500;color:var(--text)}
+  .lmulti-info{font-size:12px;color:var(--text3);margin-top:2px}
+  .lnone{text-align:center;padding:2rem 1rem;color:var(--text2);font-size:14px;background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius)}
+  .lnone i{display:block;font-size:28px;color:var(--text3);margin-bottom:8px}
 </style>
 </head>
 <body>
@@ -899,6 +1033,7 @@
     <button class="nav-tab"          onclick="showScreen('day4',this)"><i class="fa-solid fa-calendar-day"></i>Day 4</button>
     <button class="nav-tab"          onclick="showScreen('day5',this)"><i class="fa-solid fa-calendar-day"></i>Day 5</button>
     <button class="nav-tab"          onclick="showScreen('optional',this)"><i class="fa-solid fa-tag"></i>自費</button>
+    <button class="nav-tab"          onclick="showScreen('search',this)"><i class="fa-solid fa-magnifying-glass"></i>查詢</button>
     <button class="nav-tab"          onclick="showScreen('contact',this)"><i class="fa-solid fa-phone"></i>聯絡</button>
     <button class="nav-tab"          onclick="showScreen('notes',this)"><i class="fa-solid fa-circle-info"></i>提醒</button>
   </nav>
@@ -925,6 +1060,24 @@
           <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">飯店</div></div>
         </div>
       </div>
+
+
+      <!-- ── SEARCH BOX ── -->
+      <div style="padding:16px 16px 0">
+        <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px">
+          <i class="fa-solid fa-magnifying-glass" style="font-size:11px"></i> 個人資訊查詢
+        </div>
+        <div style="display:flex;gap:8px">
+          <input id="lookupInput" type="text" placeholder="輸入姓名…"
+            style="flex:1;height:42px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(--radius);background:var(--white);color:var(--text);outline:none;font-family:inherit;box-shadow:0 1px 6px rgba(139,105,20,0.06)"
+            oninput="doLookup()" autocomplete="off">
+          <button onclick="doLookup()"
+            style="height:42px;padding:0 16px;background:var(--gold);color:var(--dark);border:none;border-radius:var(--radius);cursor:pointer;font-size:14px;font-weight:500;font-family:inherit;flex-shrink:0">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div id="lookupResult" style="padding:0 16px"></div>
 
       <div class="overview-section-title"><i class="fa-solid fa-route"></i> 每日行程總覽</div>
       <div class="day-list-item" onclick="showScreen('day1',document.querySelectorAll('.nav-tab')[1])">
@@ -981,6 +1134,7 @@
       </div>
       <div class="bottom-spacer"></div>
     </div>
+
 
     <!-- ══ DAY 1 ══ -->
     <div id="screen-day1" class="screen">
@@ -1464,6 +1618,37 @@
       <div class="bottom-spacer"></div>
     </div>
 
+
+    <!-- ══ SEARCH ══ -->
+    <div id="screen-search" class="screen">
+      <div class="day-hero" style="background:linear-gradient(135deg,#1A1410,#2C2416);">
+        <div class="hero-circle-img"><img src="photo/contact-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+        <div class="day-num"><i class="fa-solid fa-magnifying-glass" style="margin-right:5px"></i>個人查詢</div>
+        <div class="day-main-title">查詢座位資訊</div>
+        <div class="day-subtitle">輸入姓名查詢車次、桌號、航班與接駁車</div>
+      </div>
+
+      <div class="content-section" style="margin-top:16px">
+        <div style="display:flex;gap:8px;margin-bottom:12px">
+          <input type="text" id="searchInput" placeholder="輸入姓名…"
+            style="flex:1;height:44px;padding:0 14px;font-size:15px;
+                   border:1.5px solid #E8C85A;border-radius:var(--radius);
+                   background:var(--white);color:var(--text);outline:none;
+                   font-family:'Noto Sans TC',sans-serif"
+            oninput="doMemberSearch()" onkeydown="if(event.key==='Enter')doMemberSearch()">
+          <button onclick="doMemberSearch()"
+            style="height:44px;padding:0 18px;background:#C4961A;color:#1A1410;
+                   font-size:14px;font-weight:500;border:none;
+                   border-radius:var(--radius);cursor:pointer;
+                   font-family:'Noto Sans TC',sans-serif;white-space:nowrap">
+            <i class="fa-solid fa-magnifying-glass"></i> 查詢
+          </button>
+        </div>
+        <div id="searchResult"></div>
+      </div>
+      <div class="bottom-spacer"></div>
+    </div>
+
     <!-- ══ CONTACT ══ -->
     <div id="screen-contact" class="screen">
       <div class="day-hero">
@@ -1700,6 +1885,85 @@
 </div><!-- end app-shell -->
 
 <script>
+const ROSTER = [{"n":"林坤德","c":"A","t":1,"a":"華航","sg":true,"sr":true},{"n":"黃珮瑜","c":"A","t":1,"a":"華航","sg":true,"sr":true},{"n":"陳景鴻","c":"A","t":4,"a":"華航","sg":true,"sr":true},{"n":"諸橋洋子","c":"A","t":4,"a":"華航","sg":true,"sr":true},{"n":"王明正","c":"A","t":1,"a":"華航","sg":false,"sr":false},{"n":"林麗玲","c":"A","t":1,"a":"華航","sg":false,"sr":false},{"n":"張廸君","c":"A","t":1,"a":"華航","sg":false,"sr":false},{"n":"蔡曉珍","c":"A","t":1,"a":"華航","sg":true,"sr":true},{"n":"楊景涵","c":"A","t":1,"a":"華航","sg":true,"sr":true},{"n":"李維斌","c":"A","t":1,"a":"長榮","sg":false,"sr":false},{"n":"李宥均","c":"A","t":1,"a":"長榮","sg":false,"sr":false},{"n":"張庭禎","c":"A","t":3,"a":"華航","sg":true,"sr":true},{"n":"林子荃","c":"A","t":3,"a":"華航","sg":true,"sr":true},{"n":"林倚伊","c":"A","t":3,"a":"華航","sg":false,"sr":false},{"n":"劉思妤","c":"A","t":3,"a":"長榮","sg":false,"sr":false},{"n":"蔡涵而","c":"A","t":3,"a":"長榮","sg":true,"sr":true},{"n":"張家豪","c":"A","t":3,"a":"長榮","sg":true,"sr":true},{"n":"張洧榛","c":"A","t":3,"a":"長榮","sg":true,"sr":true},{"n":"鍾政寰","c":"C","t":7,"a":"華航","sg":false,"sr":false},{"n":"張丹瀠","c":"C","t":7,"a":"華航","sg":false,"sr":false},{"n":"王美玲","c":"A","t":7,"a":"華航","sg":true,"sr":true},{"n":"高耀聰","c":"A","t":7,"a":"華航","sg":true,"sr":true},{"n":"黃麗芳","c":"B","t":6,"a":"華航","sg":true,"sr":true},{"n":"李文明","c":"B","t":6,"a":"華航","sg":true,"sr":true},{"n":"李宣儀","c":"B","t":6,"a":"華航","sg":true,"sr":true},{"n":"陳鄯安","c":"B","t":6,"a":"華航","sg":true,"sr":true},{"n":"紀春花","c":"B","t":6,"a":"華航","sg":true,"sr":true},{"n":"王素玲","c":"A","t":6,"a":"華航","sg":true,"sr":true},{"n":"詹舒惠","c":"A","t":6,"a":"長榮","sg":true,"sr":true},{"n":"劉智芳","c":"C","t":4,"a":"華航","sg":false,"sr":false},{"n":"曾慶兆","c":"A","t":3,"a":"華航","sg":false,"sr":false},{"n":"王玉珊","c":"A","t":7,"a":"長榮","sg":true,"sr":true},{"n":"陳靜瑩","c":"A","t":7,"a":"長榮","sg":true,"sr":true},{"n":"黃玉婷","c":"C","t":5,"a":"長榮","sg":true,"sr":true},{"n":"梁安睿","c":"C","t":5,"a":"長榮","sg":true,"sr":true},{"n":"梁煒文","c":"C","t":5,"a":"長榮","sg":true,"sr":true},{"n":"鄭翎綺","c":"A","t":5,"a":"長榮","sg":true,"sr":true},{"n":"劉佳馨","c":"A","t":5,"a":"長榮","sg":true,"sr":true},{"n":"江素芬","c":"A","t":5,"a":"長榮","sg":true,"sr":true},{"n":"賴芊孜","c":"A","t":5,"a":"長榮","sg":true,"sr":true},{"n":"江鴻翊","c":"A","t":5,"a":"長榮","sg":true,"sr":true},{"n":"黃耀德","c":"C","t":4,"a":"長榮","sg":true,"sr":true},{"n":"林沂嫺","c":"C","t":4,"a":"長榮","sg":true,"sr":true},{"n":"劉文正","c":"C","t":4,"a":"長榮","sg":true,"sr":true},{"n":"陳淑玲","c":"C","t":4,"a":"長榮","sg":true,"sr":true},{"n":"謝妙佩","c":"B","t":7,"a":"長榮","sg":true,"sr":true},{"n":"陳威豪","c":"B","t":7,"a":"長榮","sg":true,"sr":true},{"n":"李少華","c":"C","t":4,"a":"長榮","sg":true,"sr":true},{"n":"陳泰元","c":"A","t":6,"a":"長榮","sg":true,"sr":true},{"n":"王信博","c":"B","t":2,"a":"長榮","sg":true,"sr":true},{"n":"劉玫岱","c":"B","t":2,"a":"長榮","sg":true,"sr":true},{"n":"周足美","c":"B","t":2,"a":"華航","sg":true,"sr":true},{"n":"高麗燕","c":"B","t":2,"a":"華航","sg":true,"sr":true},{"n":"高涓涓","c":"B","t":8,"a":"華航","sg":false,"sr":false},{"n":"張惠芝","c":"B","t":8,"a":"華航","sg":true,"sr":true},{"n":"魏宜貞","c":"B","t":9,"a":"華航","sg":true,"sr":true},{"n":"楊秋瑾","c":"B","t":9,"a":"華航","sg":true,"sr":true},{"n":"邱淑宜","c":"B","t":12,"a":"華航","sg":false,"sr":false},{"n":"潘美惠","c":"B","t":12,"a":"華航","sg":true,"sr":true},{"n":"趙思美","c":"B","t":9,"a":"華航","sg":true,"sr":false},{"n":"游傑","c":"B","t":9,"a":"華航","sg":true,"sr":false},{"n":"曹祖棟","c":"B","t":9,"a":"華航","sg":true,"sr":true},{"n":"張偉傑","c":"B","t":9,"a":"華航","sg":true,"sr":true},{"n":"林曼芳","c":"B","t":8,"a":"長榮","sg":true,"sr":true},{"n":"賴俊伯","c":"B","t":8,"a":"長榮","sg":true,"sr":true},{"n":"李岳訓","c":"B","t":9,"a":"長榮","sg":true,"sr":true},{"n":"李委蕓","c":"B","t":9,"a":"長榮","sg":true,"sr":true},{"n":"林依萍","c":"B","t":2,"a":"長榮","sg":false,"sr":false},{"n":"林婉婷","c":"B","t":2,"a":"長榮","sg":false,"sr":false},{"n":"王馨苹","c":"B","t":2,"a":"長榮","sg":false,"sr":false},{"n":"王辰軒","c":"B","t":2,"a":"長榮","sg":false,"sr":false},{"n":"賴淑卿","c":"B","t":2,"a":"長榮","sg":true,"sr":true},{"n":"游麗玉","c":"B","t":8,"a":"長榮","sg":true,"sr":true},{"n":"江宗益","c":"B","t":8,"a":"長榮","sg":true,"sr":true},{"n":"江秉葳","c":"B","t":8,"a":"長榮","sg":true,"sr":true},{"n":"林修正","c":"D","t":13,"a":"長榮","sg":false,"sr":false},{"n":"莊凱婷","c":"D","t":13,"a":"長榮","sg":false,"sr":false},{"n":"吳景為","c":"D","t":13,"a":"華航","sg":false,"sr":false},{"n":"李嘉修","c":"D","t":13,"a":"華航","sg":false,"sr":false},{"n":"呂旭偉","c":"D","t":15,"a":"長榮","sg":false,"sr":false},{"n":"武金線","c":"D","t":15,"a":"長榮","sg":false,"sr":false},{"n":"黃為辰","c":"D","t":12,"a":"長榮","sg":true,"sr":true},{"n":"柯登淵","c":"D","t":14,"a":"長榮","sg":false,"sr":false},{"n":"徐吉昌","c":"C","t":10,"a":"長榮","sg":true,"sr":true},{"n":"黃梅玉","c":"C","t":10,"a":"長榮","sg":true,"sr":true},{"n":"蘇立偉","c":"D","t":12,"a":"華航","sg":true,"sr":true},{"n":"林誌誠","c":"D","t":12,"a":"華航","sg":true,"sr":true},{"n":"林生奇","c":"D","t":16,"a":"華航","sg":true,"sr":true},{"n":"陳姵蓉","c":"D","t":16,"a":"華航","sg":true,"sr":true},{"n":"巫賢信","c":"D","t":12,"a":"華航","sg":true,"sr":true},{"n":"李珊珊","c":"D","t":12,"a":"長榮","sg":true,"sr":true},{"n":"李蒲敏","c":"D","t":12,"a":"長榮","sg":true,"sr":true},{"n":"林宜慧","c":"D","t":13,"a":"長榮","sg":false,"sr":false},{"n":"邱玉彣","c":"D","t":13,"a":"長榮","sg":true,"sr":true},{"n":"劉介源","c":"D","t":10,"a":"長榮","sg":false,"sr":false},{"n":"沈巧琳","c":"D","t":10,"a":"長榮","sg":false,"sr":false},{"n":"鄭其金","c":"D","t":15,"a":"華航","sg":true,"sr":true},{"n":"邱慧玲","c":"D","t":15,"a":"華航","sg":true,"sr":true},{"n":"林麗如","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"楊錫福","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"楊稟鈞","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"黃彥瑋","c":"D","t":13,"a":"華航","sg":false,"sr":false},{"n":"林宜貞","c":"C","t":10,"a":"華航","sg":true,"sr":true},{"n":"張瑜倩","c":"C","t":10,"a":"華航","sg":true,"sr":true},{"n":"陳佳華","c":"C","t":10,"a":"長榮","sg":true,"sr":true},{"n":"劉敬群","c":"C","t":10,"a":"華航","sg":true,"sr":true},{"n":"陳建銘","c":"C","t":15,"a":"華航","sg":true,"sr":true},{"n":"黃少甫","c":"C","t":16,"a":"長榮","sg":false,"sr":false},{"n":"高興國","c":"C","t":16,"a":"長榮","sg":true,"sr":true},{"n":"林瑀謙","c":"C","t":16,"a":"華航","sg":true,"sr":false},{"n":"林欣慧","c":"C","t":16,"a":"華航","sg":false,"sr":false},{"n":"楊舒鈞","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"蕭詠仁","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"蕭勝文","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"蕭庭鈞","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"周雅梅","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"蕭宇辰","c":"C","t":11,"a":"華航","sg":false,"sr":false},{"n":"林弘偉","c":"C","t":11,"a":"長榮","sg":true,"sr":true},{"n":"林可恩","c":"C","t":11,"a":"長榮","sg":true,"sr":true},{"n":"黃文德","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"謝嘉芬","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"黃盈儒","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"黃盈璇","c":"D","t":14,"a":"長榮","sg":true,"sr":true},{"n":"張光緯","c":"C","t":16,"a":"長榮","sg":true,"sr":true},{"n":"張國水","c":"C","t":16,"a":"長榮","sg":true,"sr":true},{"n":"周維楨","c":"D","t":15,"a":"華航","sg":true,"sr":true},{"n":"周冠緯","c":"D","t":15,"a":"華航","sg":true,"sr":true},{"n":"孫哲文","c":"D","t":13,"a":"華航","sg":true,"sr":true}];
+
+function doLookup(){
+  var q = document.getElementById('lookupInput').value.trim();
+  var el = document.getElementById('lookupResult');
+  if(!q){el.innerHTML='';el.style.paddingBottom='0';el.style.paddingTop='0';return;}
+  var hits = ROSTER.filter(function(d){return d.n.indexOf(q)>=0;});
+  if(hits.length===0){
+    el.innerHTML='<div class="lnone"><i class="fa-solid fa-face-sad-tear"></i>找不到「'+q+'」<br>請確認姓名是否正確</div>';
+    return;
+  }
+  if(hits.length===1){
+    el.innerHTML = renderLookup(hits[0]);
+  } else {
+    el.innerHTML = '<div class="lmulti">'+hits.map(function(h){
+      return '<div class="lmulti-card" onclick="showLookupOne(\''+h.n+'\')">'
+        +'<div class="lmulti-av">'+h.n.charAt(0)+'</div>'
+        +'<div><div class="lmulti-name">'+h.n+'</div>'
+        +'<div class="lmulti-info">'+h.c+'車 · 第'+h.t+'桌 · '+h.a+'</div></div>'
+        +'<i class="fa-solid fa-chevron-right" style="color:var(--gold);margin-left:auto;font-size:13px"></i>'
+        +'</div>';
+    }).join('')+'</div>';
+  }
+}
+
+function showLookupOne(name){
+  var h = ROSTER.find(function(d){return d.n===name;});
+  if(h) document.getElementById('lookupResult').innerHTML = renderLookup(h);
+}
+
+function renderLookup(h){
+  var gatherMsg = '';
+  if(h.sg){
+    gatherMsg = '<strong>4/25 凌晨 3:45</strong> 公司集合<br>新北市新店區民權路108號（江陵國際大樓大門）';
+  } else if(h.a==='長榮'){
+    gatherMsg = '<strong>4/25 凌晨 4:45</strong> 桃園機場集合<br>第二航廈 長榮航空 20號 團體櫃台後方';
+  } else if(h.a==='華航'){
+    gatherMsg = '<strong>4/25 凌晨 4:45</strong> 桃園機場集合<br>第一航廈 中華航空 11號 團體櫃台後方';
+  }
+
+  var retMsg = '';
+  if(h.sr){
+    retMsg = '<span class="stag-yes">有搭乘</span>';
+  } else {
+    retMsg = '<span class="stag-no">不搭乘</span>';
+  }
+
+  return '<div class="lcard">'
+    +'<div class="lcard-header">'
+    +'<div class="lcard-avatar">'+h.n.charAt(0)+'</div>'
+    +'<div class="lcard-name">'+h.n+'</div>'
+    +'</div>'
+    +'<div class="lcard-grid">'
+    +'<div class="lcard-cell"><div class="lcell-label">車次</div><div class="lcell-val">'+h.c+' 車</div></div>'
+    +'<div class="lcard-cell"><div class="lcell-label">桌號</div><div class="lcell-val">第 '+h.t+' 桌</div></div>'
+    +'<div class="lcard-cell-full" style="border-bottom:1px solid #EDE3CC">'
+    +'<div class="lcell-label">航空公司</div>'
+    +'<div style="margin-top:4px"><span class="lcell-airline"><i class="fa-solid fa-plane"></i>'+h.a+(h.a==='長榮'?' BR-383':' CI-787')+'</span></div>'
+    +'</div>'
+    +'</div>'
+    +'<div class="shuttle-row2">'
+    +'<span class="shuttle-label2"><i class="fa-solid fa-bus"></i>接駁車 去程（4/25）</span>'
+    +(h.sg?'<span class="stag-yes">有搭乘</span>':'<span class="stag-no">不搭乘</span>')
+    +'</div>'
+    +'<div class="shuttle-row2">'
+    +'<span class="shuttle-label2"><i class="fa-solid fa-bus"></i>接駁車 回程（4/29）</span>'
+    +retMsg
+    +'</div>'
+    +(gatherMsg?'<div class="gather-box"><i class="fa-solid fa-location-dot"></i><div class="gather-text">'+gatherMsg+'</div></div>':'')
+    +'</div>';
+  document.getElementById('lookupResult').style.paddingBottom = '0';
+  document.getElementById('lookupResult').style.paddingTop = '12px';
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var inp = document.getElementById('lookupInput');
+  if(inp) inp.addEventListener('keydown',function(e){if(e.key==='Enter')doLookup();});
+});
+
 function showScreen(id, tabEl) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -1707,10 +1971,75 @@ function showScreen(id, tabEl) {
   if (tabEl) {
     tabEl.classList.add('active');
     tabEl.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    
   }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+const MEMBER_DATA = [{"name": "林坤德", "car": "A", "table": 1, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "黃珮瑜", "car": "A", "table": 1, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "陳景鴻", "car": "A", "table": 4, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "諸橋洋子", "car": "A", "table": 4, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "王明正", "car": "A", "table": 1, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "林麗玲", "car": "A", "table": 1, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "張廸君", "car": "A", "table": 1, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "蔡曉珍", "car": "A", "table": 1, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "楊景涵", "car": "A", "table": 1, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "李維斌", "car": "A", "table": 1, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "李宥均", "car": "A", "table": 1, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "張庭禎", "car": "A", "table": 3, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林子荃", "car": "A", "table": 3, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林倚伊", "car": "A", "table": 3, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "劉思妤", "car": "A", "table": 3, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "蔡涵而", "car": "A", "table": 3, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "張家豪", "car": "A", "table": 3, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "張洧榛", "car": "A", "table": 3, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "鍾政寰", "car": "C", "table": 7, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "張丹瀠", "car": "C", "table": 7, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "王美玲", "car": "A", "table": 7, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "高耀聰", "car": "A", "table": 7, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "黃麗芳", "car": "B", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "李文明", "car": "B", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "李宣儀", "car": "B", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "陳鄯安", "car": "B", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "紀春花", "car": "B", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "王素玲", "car": "A", "table": 6, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "詹舒惠", "car": "A", "table": 6, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉智芳", "car": "C", "table": 4, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "曾慶兆", "car": "A", "table": 3, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "王玉珊", "car": "A", "table": 7, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "陳靜瑩", "car": "A", "table": 7, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃玉婷", "car": "C", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "梁安睿", "car": "C", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "梁煒文", "car": "C", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "鄭翎綺", "car": "A", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉佳馨", "car": "A", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "江素芬", "car": "A", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "賴芊孜", "car": "A", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "江鴻翊", "car": "A", "table": 5, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃耀德", "car": "C", "table": 4, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林沂嫺", "car": "C", "table": 4, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉文正", "car": "C", "table": 4, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "陳淑玲", "car": "C", "table": 4, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "謝妙佩", "car": "B", "table": 7, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "陳威豪", "car": "B", "table": 7, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "李少華", "car": "C", "table": 4, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "陳泰元", "car": "A", "table": 6, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "王信博", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉玫岱", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "周足美", "car": "B", "table": 2, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "高麗燕", "car": "B", "table": 2, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "高涓涓", "car": "B", "table": 8, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "張惠芝", "car": "B", "table": 8, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "魏宜貞", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "楊秋瑾", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "邱淑宜", "car": "B", "table": 12, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "潘美惠", "car": "B", "table": 12, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "趙思美", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": false}, {"name": "游傑", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": false}, {"name": "曹祖棟", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "張偉傑", "car": "B", "table": 9, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林曼芳", "car": "B", "table": 8, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "賴俊伯", "car": "B", "table": 8, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "李岳訓", "car": "B", "table": 9, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "李委蕓", "car": "B", "table": 9, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林依萍", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "林婉婷", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "王馨苹", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "王辰軒", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "賴淑卿", "car": "B", "table": 2, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "游麗玉", "car": "B", "table": 8, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "江宗益", "car": "B", "table": 8, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "江秉葳", "car": "B", "table": 8, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林修正", "car": "D", "table": 13, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "莊凱婷", "car": "D", "table": 13, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "吳景為", "car": "D", "table": 13, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "李嘉修", "car": "D", "table": 13, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "呂旭偉", "car": "D", "table": 15, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "武金線", "car": "D", "table": 15, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "黃為辰", "car": "D", "table": 12, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "柯登淵", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "徐吉昌", "car": "C", "table": 10, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃梅玉", "car": "C", "table": 10, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "蘇立偉", "car": "D", "table": 12, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林誌誠", "car": "D", "table": 12, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林生奇", "car": "D", "table": 16, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "陳姵蓉", "car": "D", "table": 16, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "巫賢信", "car": "D", "table": 12, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "李珊珊", "car": "D", "table": 12, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "李蒲敏", "car": "D", "table": 12, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林宜慧", "car": "D", "table": 13, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "邱玉彣", "car": "D", "table": 13, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉介源", "car": "D", "table": 10, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "沈巧琳", "car": "D", "table": 10, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "鄭其金", "car": "D", "table": 15, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "邱慧玲", "car": "D", "table": 15, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "林麗如", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "楊錫福", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "楊稟鈞", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃彥瑋", "car": "D", "table": 13, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "林宜貞", "car": "C", "table": 10, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "張瑜倩", "car": "C", "table": 10, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "陳佳華", "car": "C", "table": 10, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "劉敬群", "car": "C", "table": 10, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "陳建銘", "car": "C", "table": 15, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "黃少甫", "car": "C", "table": 16, "airline": "長榮", "shuttleGo": false, "shuttleBack": false}, {"name": "高興國", "car": "C", "table": 16, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林瑀謙", "car": "C", "table": 16, "airline": "華航", "shuttleGo": true, "shuttleBack": false}, {"name": "林欣慧", "car": "C", "table": 16, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "楊舒鈞", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "蕭詠仁", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "蕭勝文", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "蕭庭鈞", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "周雅梅", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "蕭宇辰", "car": "C", "table": 11, "airline": "華航", "shuttleGo": false, "shuttleBack": false}, {"name": "林弘偉", "car": "C", "table": 11, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "林可恩", "car": "C", "table": 11, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃文德", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "謝嘉芬", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃盈儒", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "黃盈璇", "car": "D", "table": 14, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "張光緯", "car": "C", "table": 16, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "張國水", "car": "C", "table": 16, "airline": "長榮", "shuttleGo": true, "shuttleBack": true}, {"name": "周維楨", "car": "D", "table": 15, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "周冠緯", "car": "D", "table": 15, "airline": "華航", "shuttleGo": true, "shuttleBack": true}, {"name": "孫哲文", "car": "D", "table": 13, "airline": "華航", "shuttleGo": true, "shuttleBack": true}];
+
+function renderMemberCard(p) {
+  return `<div class="member-card">
+    <div class="member-header">
+      <div class="member-avatar">${p.name[0]}</div>
+      <div class="member-name">${p.name}</div>
+    </div>
+    <div class="member-grid">
+      <div class="member-cell">
+        <div class="mc-label"><i class="fa-solid fa-bus"></i>車次</div>
+        <div class="mc-val">${p.car} 車</div>
+      </div>
+      <div class="member-cell">
+        <div class="mc-label"><i class="fa-solid fa-utensils"></i>桌號</div>
+        <div class="mc-val">第 ${p.table} 桌</div>
+      </div>
+      <div class="member-cell-full">
+        <div class="mc-label"><i class="fa-solid fa-plane"></i>航空公司</div>
+        <div class="mc-val-sm" style="margin-top:4px">
+          <span style="background:#FAF0DC;color:#8B6914;border:1px solid #E8C85A;
+                       padding:4px 14px;border-radius:20px;font-size:13px;font-weight:500">
+            ✈ ${p.airline === '長榮' ? '長榮航空 EVA Air BR' : '中華航空 China Airlines CI'}
+          </span>
+        </div>
+      </div>
+      <div class="member-cell">
+        <div class="mc-label"><i class="fa-solid fa-arrow-right"></i>去程接駁車</div>
+        <div style="margin-top:4px"><span class="shuttle-tag ${p.shuttleGo ? 'tag-yes' : 'tag-no'}">${p.shuttleGo ? '✓ 有搭乘' : '✗ 不搭乘'}</span></div>
+      </div>
+      <div class="member-cell">
+        <div class="mc-label"><i class="fa-solid fa-arrow-left"></i>回程接駁車</div>
+        <div style="margin-top:4px"><span class="shuttle-tag ${p.shuttleBack ? 'tag-yes' : 'tag-no'}">${p.shuttleBack ? '✓ 有搭乘' : '✗ 不搭乘'}</span></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function doMemberSearch() {
+  const q = document.getElementById('searchInput').value.trim();
+  const el = document.getElementById('searchResult');
+  if (!q) { el.innerHTML = ''; return; }
+  const hits = MEMBER_DATA.filter(p => p.name.includes(q));
+  if (hits.length === 0) {
+    el.innerHTML = `<div class="not-found-card"><i class="fa-solid fa-magnifying-glass"></i>找不到「${q}」<br><span style="font-size:12px;color:var(--text3)">請確認姓名是否正確</span></div>`;
+  } else if (hits.length === 1) {
+    el.innerHTML = renderMemberCard(hits[0]);
+  } else {
+    el.innerHTML = hits.map(p => `
+      <div class="multi-item" onclick="selectMember('${p.name}')">
+        <div class="multi-avatar">${p.name[0]}</div>
+        <div>
+          <div class="multi-name">${p.name}</div>
+          <div class="multi-info">${p.car}車 · 第${p.table}桌 · ${p.airline}</div>
+        </div>
+        <i class="fa-solid fa-chevron-right" style="color:var(--gold);margin-left:auto;font-size:12px"></i>
+      </div>`).join('');
+  }
+}
+
+function selectMember(name) {
+  const p = MEMBER_DATA.find(d => d.name === name);
+  if (p) document.getElementById('searchResult').innerHTML = renderMemberCard(p);
+}
+
 </script>
 </body>
 </html>
