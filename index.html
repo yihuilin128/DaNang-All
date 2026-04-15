@@ -1945,17 +1945,18 @@ function renderLookup(h){
     +'<div style="margin-top:4px"><span class="lcell-airline"><i class="fa-solid fa-plane"></i>'+h.a+(h.a==='長榮'?' BR-383':' CI-787')+'</span></div>'
     +'</div>'
     +'</div>'
-    +'<div class="shuttle-row2">'
-    +'<span class="shuttle-label2"><i class="fa-solid fa-bus"></i>接駁車 去程（4/25）</span>'
-    +(h.sg?'<span class="stag-yes">有搭乘</span>':'<span class="stag-no">不搭乘</span>')
+    +'<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-top:1px solid #EDE3CC">'
+    +'<span style="font-size:13px;color:var(--text2);display:flex;align-items:center;gap:6px"><i class="fa-solid fa-bus" style="color:var(--gold);font-size:12px;width:14px;text-align:center"></i>接駁車</span>'
+    +'<div style="display:flex;gap:8px;align-items:center">'
+    +'<span style="font-size:11px;color:var(--text3)">去程</span>'
+    +(h.sg?'<span class="stag-yes">有</span>':'<span class="stag-no">無</span>')
+    +'<span style="font-size:11px;color:var(--text3);margin-left:4px">回程</span>'
+    +(h.sr?'<span class="stag-yes">有</span>':'<span class="stag-no">無</span>')
     +'</div>'
-    +'<div class="shuttle-row2">'
-    +'<span class="shuttle-label2"><i class="fa-solid fa-bus"></i>接駁車 回程（4/29）</span>'
-    +retMsg
     +'</div>'
-    +(gatherMsg?'<div class="gather-box"><i class="fa-solid fa-location-dot"></i><div class="gather-text">'+gatherMsg+'</div></div>':'')
+    +(gatherMsg?'<div class="gather-box" style="margin-bottom:4px"><i class="fa-solid fa-location-dot"></i><div class="gather-text">'+gatherMsg+'</div></div>':'')
     +'</div>';
-  document.getElementById('lookupResult').style.paddingBottom = '0';
+  document.getElementById('lookupResult').style.paddingBottom = '16px';
   document.getElementById('lookupResult').style.paddingTop = '12px';
 }
 
