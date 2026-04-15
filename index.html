@@ -1899,7 +1899,7 @@ function renderLookup(h){
     +'<div class="lcard-cell"><div class="lcell-label">桌號</div><div class="lcell-val">第 '+h.t+' 桌</div></div>'
     +'<div class="lcard-cell-full" style="border-bottom:1px solid #EDE3CC">'
     +'<div class="lcell-label">航空公司</div>'
-    +'<div style="margin-top:4px"><span class="lcell-airline"><i class="fa-solid fa-plane"></i>'+h.a+(h.a==='長榮'?' BR-1383':' CI-787')+'</span></div>'
+    +'<div style="margin-top:4px"><span class="lcell-airline"><i class="fa-solid fa-plane"></i>'+(h.a==='長榮'?'長榮航空・第二航廈':'中華航空・第一航廈')+'</span></div>'
     +'</div>'
     +'</div>'
     +'<div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;border-top:1px solid #EDE3CC">'
@@ -1955,7 +1955,7 @@ function renderMemberCard(p) {
         <div class="mc-val-sm" style="margin-top:4px">
           <span style="background:#FAF0DC;color:#8B6914;border:1px solid #E8C85A;
                        padding:4px 14px;border-radius:20px;font-size:13px;font-weight:500">
-            ✈ ${p.airline === '長榮' ? '長榮航空 EVA Air BR' : '中華航空 China Airlines CI'}
+            ✈ ${p.airline === '長榮' ? '長榮航空・第二航廈' : '中華航空・第一航廈'}
           </span>
         </div>
       </div>
@@ -1986,7 +1986,7 @@ function doMemberSearch() {
         <div class="multi-avatar">${p.name[0]}</div>
         <div>
           <div class="multi-name">${p.name}</div>
-          <div class="multi-info">${p.car}車 · 第${p.table}桌 · ${p.airline}</div>
+          <div class="multi-info">${p.car}車 · 第${p.table}桌 · ${p.airline === '長榮' ? '長榮航空・第二航廈' : '中華航空・第一航廈'}</div>
         </div>
         <i class="fa-solid fa-chevron-right" style="color:var(--gold);margin-left:auto;font-size:12px"></i>
       </div>`).join('');
