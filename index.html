@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -37,980 +38,1015 @@
     width: 100%;
   }
 
-  /* ── APP SHELL ── */
-  .app-shell {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-    max-width: 480px;
-    margin: 0 auto;
-    background: var(--white);
-    box-shadow: 0 0 60px rgba(0,0,0,0.15);
-  }
+/* ── APP SHELL ── */
+.app-shell {
+display: flex;
+flex-direction: column;
+min-height: 100dvh;
+max-width: 480px;
+margin: 0 auto;
+background: var(–white);
+box-shadow: 0 0 60px rgba(0,0,0,0.15);
+}
 
-  /* ── HEADER ── */
-  .app-header {
-    flex-shrink: 0;
-    background: var(--dark);
-    position: relative;
-    overflow: hidden;
-  }
-  .header-bg {
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, #1A1410 0%, #3D2E0F 50%, #1A1410 100%);
-  }
-  .header-pattern {
-    position: absolute; inset: 0;
-    opacity: 0.06;
-    background-image: repeating-linear-gradient(45deg, #C4961A 0, #C4961A 1px, transparent 0, transparent 50%);
-    background-size: 14px 14px;
-  }
-  .header-content {
-    position: relative;
-    padding: 16px 20px 14px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .header-logo {
-    width: 42px; height: 42px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--dark);
-    font-family: 'Noto Serif TC', serif;
-    box-shadow: 0 0 0 3px rgba(196,150,26,0.3);
-  }
-  .header-text { flex: 1; min-width: 0; }
-  .header-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--gold-light);
-    line-height: 1.2;
-    letter-spacing: 1px;
-  }
-  .header-sub {
-    font-size: 11px;
-    color: rgba(255,255,255,0.5);
-    margin-top: 2px;
-  }
-  .date-pill {
-    background: rgba(196,150,26,0.2);
-    border: 1px solid rgba(196,150,26,0.4);
-    color: var(--gold-light);
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
+/* ── HEADER ── */
+.app-header {
+flex-shrink: 0;
+background: var(–dark);
+position: relative;
+overflow: hidden;
+}
+.header-bg {
+position: absolute; inset: 0;
+background: linear-gradient(135deg, #1A1410 0%, #3D2E0F 50%, #1A1410 100%);
+}
+.header-pattern {
+position: absolute; inset: 0;
+opacity: 0.06;
+background-image: repeating-linear-gradient(45deg, #C4961A 0, #C4961A 1px, transparent 0, transparent 50%);
+background-size: 14px 14px;
+}
+.header-content {
+position: relative;
+padding: 16px 20px 14px;
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.header-logo {
+width: 42px; height: 42px;
+background: var(–gold);
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+flex-shrink: 0;
+font-size: 18px;
+font-weight: 700;
+color: var(–dark);
+font-family: ‘Noto Serif TC’, serif;
+box-shadow: 0 0 0 3px rgba(196,150,26,0.3);
+}
+.header-text { flex: 1; min-width: 0; }
+.header-title {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 17px;
+font-weight: 700;
+color: var(–gold-light);
+line-height: 1.2;
+letter-spacing: 1px;
+}
+.header-sub {
+font-size: 11px;
+color: rgba(255,255,255,0.5);
+margin-top: 2px;
+}
+.date-pill {
+background: rgba(196,150,26,0.2);
+border: 1px solid rgba(196,150,26,0.4);
+color: var(–gold-light);
+font-size: 11px;
+padding: 3px 8px;
+border-radius: 20px;
+white-space: nowrap;
+flex-shrink: 0;
+}
 
-  /* ── NAV TABS ── */
-  .nav-tabs {
-    flex-shrink: 0;
-    background: var(--dark);
-    display: flex;
-    padding: 0 16px 12px;
-    gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .nav-tabs::-webkit-scrollbar { display: none; }
-  .nav-tab {
-    flex: 0 0 auto;
-    padding: 7px 13px;
-    border-radius: 20px;
-    border: 1px solid rgba(196,150,26,0.25);
-    background: transparent;
-    color: rgba(255,255,255,0.5);
-    font-size: 12px;
-    font-family: 'Noto Sans TC', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .nav-tab i { font-size: 11px; }
-  .nav-tab.active {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: var(--dark);
-    font-weight: 500;
-  }
-  .nav-tab:active { transform: scale(0.96); }
+/* ── NAV TABS ── */
+.nav-tabs {
+flex-shrink: 0;
+background: var(–dark);
+display: flex;
+padding: 0 16px 12px;
+gap: 6px;
+overflow-x: auto;
+scrollbar-width: none;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.nav-tab {
+flex: 0 0 auto;
+padding: 7px 13px;
+border-radius: 20px;
+border: 1px solid rgba(196,150,26,0.25);
+background: transparent;
+color: rgba(255,255,255,0.5);
+font-size: 12px;
+font-family: ‘Noto Sans TC’, sans-serif;
+cursor: pointer;
+transition: all 0.2s;
+white-space: nowrap;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.nav-tab i { font-size: 11px; }
+.nav-tab.active {
+background: var(–gold);
+border-color: var(–gold);
+color: var(–dark);
+font-weight: 500;
+}
+.nav-tab:active { transform: scale(0.96); }
 
-  /* ── SCROLLABLE BODY ── */
-  .app-body {
-    flex: 1;
-    overflow-x: hidden;
-  }
-  .app-body::-webkit-scrollbar { width: 3px; }
-  .app-body::-webkit-scrollbar-track { background: transparent; }
-  .app-body::-webkit-scrollbar-thumb { background: #E8D4A0; border-radius: 2px; }
+/* ── SCROLLABLE BODY ── */
+.app-body {
+flex: 1;
+overflow-x: hidden;
+}
+.app-body::-webkit-scrollbar { width: 3px; }
+.app-body::-webkit-scrollbar-track { background: transparent; }
+.app-body::-webkit-scrollbar-thumb { background: #E8D4A0; border-radius: 2px; }
 
-  /* ── SCREENS ── */
-  .screen { display: none; animation: fadeUp 0.25s ease; }
-  .screen.active { display: block; }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+/* ── SCREENS ── */
+.screen { display: none; animation: fadeUp 0.25s ease; }
+.screen.active { display: block; }
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(10px); }
+to   { opacity: 1; transform: translateY(0); }
+}
 
-  /* ── SPOT IMAGE ── */
-  .spot-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    display: block;
-    background: var(--surface2);
-  }
-  .hotel-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    display: block;
-  }
+/* ── SPOT IMAGE ── */
+.spot-img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 12px;
+margin-bottom: 12px;
+display: block;
+background: var(–surface2);
+}
+.hotel-img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+border-radius: 12px;
+margin-bottom: 12px;
+display: block;
+}
 
-  /* ── DAY HERO ── */
-  .day-hero {
-    background: var(--dark2);
-    padding: 20px 20px 16px;
-    position: relative;
-    overflow: hidden;
-  }
-  .day-hero::after {
-    content: '';
-    position: absolute;
-    right: -20px; bottom: -20px;
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    background: rgba(196,150,26,0.08);
-    border: 1px solid rgba(196,150,26,0.15);
-  }
-  .day-num {
-    font-size: 11px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .day-main-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #FFF;
-    line-height: 1.3;
-  }
-  .day-subtitle {
-    font-size: 12px;
-    color: rgba(255,255,255,0.45);
-    margin-top: 6px;
-  }
-  .day-meals-strip {
-    display: flex;
-    gap: 8px;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
-  .meal-chip {
-    background: rgba(196,150,26,0.15);
-    border: 1px solid rgba(196,150,26,0.25);
-    border-radius: 20px;
-    padding: 4px 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    color: rgba(255,255,255,0.7);
-    flex-shrink: 0;
-  }
-  .meal-chip i { color: var(--gold); font-size: 10px; }
-  .meal-chip span { color: var(--gold); font-weight: 500; }
+/* ── DAY HERO ── */
+.day-hero {
+background: var(–dark2);
+padding: 20px 20px 16px;
+position: relative;
+overflow: hidden;
+}
+.day-hero::after {
+content: ‘’;
+position: absolute;
+right: -20px; bottom: -20px;
+width: 120px; height: 120px;
+border-radius: 50%;
+background: rgba(196,150,26,0.08);
+border: 1px solid rgba(196,150,26,0.15);
+}
+.day-num {
+font-size: 11px;
+color: var(–gold);
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 4px;
+}
+.day-main-title {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 20px;
+font-weight: 700;
+color: #FFF;
+line-height: 1.3;
+}
+.day-subtitle {
+font-size: 12px;
+color: rgba(255,255,255,0.45);
+margin-top: 6px;
+}
+.day-meals-strip {
+display: flex;
+gap: 8px;
+margin-top: 14px;
+flex-wrap: wrap;
+}
+.meal-chip {
+background: rgba(196,150,26,0.15);
+border: 1px solid rgba(196,150,26,0.25);
+border-radius: 20px;
+padding: 4px 10px;
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 11px;
+color: rgba(255,255,255,0.7);
+flex-shrink: 0;
+}
+.meal-chip i { color: var(–gold); font-size: 10px; }
+.meal-chip span { color: var(–gold); font-weight: 500; }
 
-  /* ── CONTENT SECTIONS ── */
-  .content-section {
-    padding: 0 16px;
-    margin-top: 20px;
-  }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-  .section-icon {
-    width: 26px; height: 26px;
-    background: var(--gold-pale);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--gold-dark);
-    font-size: 13px;
-    flex-shrink: 0;
-  }
-  .section-title {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--gold-dark);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-  .section-line {
-    flex: 1;
-    height: 1px;
-    background: var(--gold-pale);
-  }
+/* ── CONTENT SECTIONS ── */
+.content-section {
+padding: 0 16px;
+margin-top: 20px;
+}
+.section-header {
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 10px;
+}
+.section-icon {
+width: 26px; height: 26px;
+background: var(–gold-pale);
+border-radius: 8px;
+display: flex; align-items: center; justify-content: center;
+color: var(–gold-dark);
+font-size: 13px;
+flex-shrink: 0;
+}
+.section-title {
+font-size: 12px;
+font-weight: 700;
+color: var(–gold-dark);
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+.section-line {
+flex: 1;
+height: 1px;
+background: var(–gold-pale);
+}
 
-  /* ── SPOT CARDS ── */
-  .spot-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 12px rgba(139,105,20,0.06);
-    position: relative;
-    overflow: hidden;
-  }
-  .spot-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: var(--gold);
-  }
-  .spot-name {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .spot-name i { color: var(--gold); font-size: 13px; }
-  .spot-desc {
-    font-size: 13px;
-    color: var(--text2);
-    line-height: 1.7;
-  }
-  .map-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 10px;
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 20px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.15s;
-    font-family: 'Noto Sans TC', sans-serif;
-  }
-  .map-btn i { font-size: 12px; }
-  .map-btn:active { transform: scale(0.96); background: var(--gold-dark); color: #fff; }
+/* ── SPOT CARDS ── */
+.spot-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+padding: 14px 16px;
+margin-bottom: 10px;
+box-shadow: 0 2px 12px rgba(139,105,20,0.06);
+position: relative;
+overflow: hidden;
+}
+.spot-card::before {
+content: ‘’;
+position: absolute;
+left: 0; top: 0; bottom: 0;
+width: 3px;
+background: var(–gold);
+}
+.spot-name {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 15px;
+font-weight: 700;
+color: var(–text);
+margin-bottom: 6px;
+display: flex;
+align-items: center;
+gap: 7px;
+}
+.spot-name i { color: var(–gold); font-size: 13px; }
+.spot-desc {
+font-size: 13px;
+color: var(–text2);
+line-height: 1.7;
+}
+.map-btn {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+margin-top: 10px;
+background: var(–gold);
+color: var(–dark);
+font-size: 12px;
+font-weight: 500;
+padding: 6px 14px;
+border-radius: 20px;
+text-decoration: none;
+border: none;
+cursor: pointer;
+transition: all 0.15s;
+font-family: ‘Noto Sans TC’, sans-serif;
+}
+.map-btn i { font-size: 12px; }
+.map-btn:active { transform: scale(0.96); background: var(–gold-dark); color: #fff; }
 
-  /* ── HOTEL CARD ── */
-  .hotel-card {
-    background: var(--dark2);
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 10px;
-    overflow: hidden;
-  }
-  .hotel-name {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--gold-light);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .hotel-name i { font-size: 13px; }
-  .hotel-detail {
-    font-size: 12px;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .hotel-detail i { color: var(--gold); width: 14px; text-align: center; font-size: 11px; }
-  .hotel-detail strong { color: rgba(255,255,255,0.8); }
+/* ── HOTEL CARD ── */
+.hotel-card {
+background: var(–dark2);
+border-radius: var(–radius);
+padding: 16px;
+margin-bottom: 10px;
+overflow: hidden;
+}
+.hotel-name {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 15px;
+font-weight: 700;
+color: var(–gold-light);
+margin-bottom: 8px;
+display: flex;
+align-items: center;
+gap: 7px;
+}
+.hotel-name i { font-size: 13px; }
+.hotel-detail {
+font-size: 12px;
+color: rgba(255,255,255,0.55);
+margin-bottom: 4px;
+display: flex;
+align-items: center;
+gap: 7px;
+}
+.hotel-detail i { color: var(–gold); width: 14px; text-align: center; font-size: 11px; }
+.hotel-detail strong { color: rgba(255,255,255,0.8); }
 
-  /* ── INFO CARDS ── */
-  .info-card {
-    background: var(--surface);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    margin-bottom: 8px;
-  }
-  .info-card-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gold-dark);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .info-card-title i { font-size: 13px; }
-  .info-card-body {
-    font-size: 13px;
-    color: var(--text2);
-    line-height: 1.7;
-  }
+/* ── INFO CARDS ── */
+.info-card {
+background: var(–surface);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius-sm);
+padding: 12px 14px;
+margin-bottom: 8px;
+}
+.info-card-title {
+font-size: 13px;
+font-weight: 700;
+color: var(–gold-dark);
+margin-bottom: 4px;
+display: flex;
+align-items: center;
+gap: 7px;
+}
+.info-card-title i { font-size: 13px; }
+.info-card-body {
+font-size: 13px;
+color: var(–text2);
+line-height: 1.7;
+}
 
-  /* ── CONTACT TABLE ── */
-  .contact-table {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 12px rgba(139,105,20,0.06);
-  }
-  .contact-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 16px;
-    border-bottom: 1px solid #F5EDD8;
-    gap: 8px;
-  }
-  .contact-row:last-child { border-bottom: none; }
-  .contact-label {
-    font-size: 13px;
-    color: var(--text2);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .contact-label i { color: var(--gold); font-size: 12px; width: 14px; text-align: center; }
-  .contact-value {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    text-align: right;
-  }
-  .contact-value a { color: var(--gold-dark); text-decoration: none; font-weight: 700; }
+/* ── CONTACT TABLE ── */
+.contact-table {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+overflow: hidden;
+margin-bottom: 10px;
+box-shadow: 0 2px 12px rgba(139,105,20,0.06);
+}
+.contact-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 11px 16px;
+border-bottom: 1px solid #F5EDD8;
+gap: 8px;
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-label {
+font-size: 13px;
+color: var(–text2);
+flex-shrink: 0;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.contact-label i { color: var(–gold); font-size: 12px; width: 14px; text-align: center; }
+.contact-value {
+font-size: 13px;
+font-weight: 500;
+color: var(–text);
+text-align: right;
+}
+.contact-value a { color: var(–gold-dark); text-decoration: none; font-weight: 700; }
 
-  /* ── FLIGHT CARD ── */
-  .flight-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 2px 12px rgba(139,105,20,0.06);
-  }
-  .flight-airline {
-    font-size: 11px;
-    color: var(--gold-dark);
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-  .flight-route {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--text);
-  }
-  .flight-arrow { color: var(--gold); }
-  .flight-time {
-    font-size: 11px;
-    color: var(--text3);
-    margin-top: 2px;
-  }
+/* ── FLIGHT CARD ── */
+.flight-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+padding: 14px 16px;
+margin-bottom: 8px;
+display: flex;
+align-items: center;
+gap: 12px;
+box-shadow: 0 2px 12px rgba(139,105,20,0.06);
+}
+.flight-airline {
+font-size: 11px;
+color: var(–gold-dark);
+font-weight: 700;
+letter-spacing: 0.5px;
+}
+.flight-route {
+flex: 1;
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 13px;
+color: var(–text);
+}
+.flight-arrow { color: var(–gold); }
+.flight-time {
+font-size: 11px;
+color: var(–text3);
+margin-top: 2px;
+}
 
-  /* ── ALERT ── */
-  .alert-box {
-    background: #FFF8E8;
-    border: 1px solid #E8C85A;
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    margin-bottom: 8px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .alert-icon { color: var(--gold-dark); flex-shrink: 0; margin-top: 1px; font-size: 14px; }
-  .alert-text { font-size: 12px; color: #7A5C10; line-height: 1.7; }
-  .alert-text strong { color: #5A420A; }
+/* ── ALERT ── */
+.alert-box {
+background: #FFF8E8;
+border: 1px solid #E8C85A;
+border-radius: var(–radius-sm);
+padding: 12px 14px;
+margin-bottom: 8px;
+display: flex;
+gap: 10px;
+align-items: flex-start;
+}
+.alert-icon { color: var(–gold-dark); flex-shrink: 0; margin-top: 1px; font-size: 14px; }
+.alert-text { font-size: 12px; color: #7A5C10; line-height: 1.7; }
+.alert-text strong { color: #5A420A; }
 
-  /* ── OVERVIEW ── */
-  .overview-hero {
-    background: var(--dark);
-    padding: 24px 20px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-  .overview-bg-circle {
-    position: absolute;
-    right: 0; top: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .overview-circle-big {
-    position: absolute;
-    right: -35px; top: -22px;
-    width: 180px; height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid rgba(196,150,26,0.55);
-    box-shadow: 0 0 0 5px rgba(196,150,26,0.09);
-    z-index: 2;
-  }
-  .overview-circle-big img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    display: block; opacity: 0.92;
-  }
-  .overview-circle-small {
-    position: absolute;
-    right: 118px; top: 42px;
-    width: 100px; height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid rgba(196,150,26,0.35);
-    box-shadow: 0 0 0 4px rgba(196,150,26,0.06);
-    z-index: 1;
-  }
-  .overview-circle-small img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    display: block; opacity: 0.85;
-  }
-  .overview-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.2;
-    position: relative;
-  }
-  .overview-title span { color: var(--gold); }
-  .overview-meta {
-    font-size: 12px;
-    color: rgba(255,255,255,0.45);
-    margin-top: 8px;
-    line-height: 1.8;
-    position: relative;
-  }
-  .overview-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin: 14px 0 0;
-    position: relative;
-  }
-  .stat-box {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(196,150,26,0.2);
-    border-radius: var(--radius-sm);
-    padding: 10px;
-    text-align: center;
-  }
-  .stat-num { font-size: 22px; font-weight: 700; color: var(--gold); }
-  .stat-label { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+/* ── OVERVIEW ── */
+.overview-hero {
+background: var(–dark2);
+padding: 24px 20px 20px;
+position: relative;
+overflow: hidden;
+}
+.overview-bg-circle {
+position: absolute;
+right: 0; top: 0;
+width: 100%; height: 100%;
+pointer-events: none;
+z-index: 0;
+}
+.overview-circle-big {
+position: absolute;
+right: -35px; top: -22px;
+width: 180px; height: 180px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid rgba(196,150,26,0.55);
+box-shadow: 0 0 0 5px rgba(196,150,26,0.09);
+z-index: 2;
+}
+.overview-circle-big img {
+width: 100%; height: 100%;
+object-fit: cover; object-position: center;
+display: block; opacity: 0.92;
+}
+.overview-circle-small {
+position: absolute;
+right: 118px; top: 42px;
+width: 100px; height: 100px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid rgba(196,150,26,0.35);
+box-shadow: 0 0 0 4px rgba(196,150,26,0.06);
+z-index: 1;
+}
+.overview-circle-small img {
+width: 100%; height: 100%;
+object-fit: cover; object-position: center;
+display: block; opacity: 0.85;
+}
+.overview-title {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 28px;
+font-weight: 700;
+color: var(–white);
+line-height: 1.2;
+position: relative;
+}
+.overview-title span { color: var(–gold); }
+.overview-meta {
+font-size: 12px;
+color: rgba(255,255,255,0.45);
+margin-top: 8px;
+line-height: 1.8;
+position: relative;
+}
+.overview-stats {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 5px;
+margin: 14px 0 0;
+position: relative;
+}
+.stat-box {
+background: rgba(196,150,26,0.12);
+border: 1px solid rgba(196,150,26,0.35);
+border-radius: 8px;
+padding: 8px 2px;
+text-align: center;
+min-width: 0;
+}
+.stat-date { font-size: 9px; color: rgba(255,255,255,0.5); margin-bottom: 3px; white-space:nowrap; }
+.stat-icon { font-size: 18px; line-height: 1; }
+.stat-high { font-size: 12px; font-weight: 700; color: #fff; margin-top: 3px; }
+.stat-low  { font-size: 10px; color: rgba(255,255,255,0.5); }
+.stat-rain { font-size: 9px; color: #87CEEB; margin-top: 2px; min-height:12px; }
+.stat-num { font-size: 22px; font-weight: 700; color: var(–gold); }
+.stat-label { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 2px; }
 
-  .day-list-item {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin: 0 16px 10px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    transition: all 0.15s;
-    box-shadow: 0 2px 10px rgba(139,105,20,0.06);
-  }
-  .day-list-item:active { transform: scale(0.98); }
-  .day-badge {
-    width: 44px; height: 44px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    flex-shrink: 0;
-    color: var(--dark);
-  }
-  .day-badge .d-num { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; }
-  .day-badge .d-date { font-size: 14px; font-weight: 700; line-height: 1; }
-  .day-list-info { flex: 1; min-width: 0; }
-  .day-list-title { font-size: 14px; font-weight: 500; color: var(--text); }
-  .day-list-sub { font-size: 12px; color: var(--text3); margin-top: 2px; }
-  .day-list-arrow { color: var(--gold); font-size: 14px; }
+.day-list-item {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+padding: 14px 16px;
+margin: 0 16px 10px;
+display: flex;
+align-items: center;
+gap: 12px;
+cursor: pointer;
+transition: all 0.15s;
+box-shadow: 0 2px 10px rgba(139,105,20,0.06);
+}
+.day-list-item:active { transform: scale(0.98); }
+.day-badge {
+width: 44px; height: 44px;
+background: var(–gold);
+border-radius: 50%;
+display: flex; flex-direction: column;
+align-items: center; justify-content: center;
+flex-shrink: 0;
+color: var(–dark);
+}
+.day-badge .d-num { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; }
+.day-badge .d-date { font-size: 14px; font-weight: 700; line-height: 1; }
+.day-list-info { flex: 1; min-width: 0; }
+.day-list-title { font-size: 14px; font-weight: 500; color: var(–text); }
+.day-list-sub { font-size: 12px; color: var(–text3); margin-top: 2px; }
+.day-list-arrow { color: var(–gold); font-size: 14px; }
 
-  .overview-section-title {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--text3);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 16px 16px 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .overview-section-title i { font-size: 11px; }
-  .bottom-spacer { height: 40px; }
+.overview-section-title {
+font-size: 11px;
+font-weight: 700;
+color: var(–text3);
+letter-spacing: 1.5px;
+text-transform: uppercase;
+padding: 16px 16px 8px;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.overview-section-title i { font-size: 11px; }
+.bottom-spacer { height: 40px; }
 
-  /* ── SELF-PAY ── */
-  .optional-card {
-    background: var(--white);
-    border: 1.5px solid #E8C85A;
-    border-radius: var(--radius);
-    padding: 16px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 12px rgba(196,150,26,0.10);
-    position: relative;
-    overflow: hidden;
-  }
-  .optional-card::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 3px;
-    background: var(--gold-light);
-  }
-  .optional-num {
-    width: 28px; height: 28px;
-    background: var(--gold);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--dark);
-    flex-shrink: 0;
-  }
-  .optional-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .optional-name {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--text);
-    flex: 1;
-  }
-  .price-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--gold-pale);
-    color: var(--gold-dark);
-    border: 1px solid #E8C85A;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 5px 14px;
-    margin-bottom: 0;
-  }
-  .price-tag i { font-size: 13px; }
+/* ── SELF-PAY ── */
+.optional-card {
+background: var(–white);
+border: 1.5px solid #E8C85A;
+border-radius: var(–radius);
+padding: 16px;
+margin-bottom: 12px;
+box-shadow: 0 2px 12px rgba(196,150,26,0.10);
+position: relative;
+overflow: hidden;
+}
+.optional-card::before {
+content: ‘’;
+position: absolute;
+left: 0; top: 0; bottom: 0;
+width: 3px;
+background: var(–gold-light);
+}
+.optional-num {
+width: 28px; height: 28px;
+background: var(–gold);
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 13px;
+font-weight: 700;
+color: var(–dark);
+flex-shrink: 0;
+}
+.optional-header {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 8px;
+}
+.optional-name {
+font-family: ‘Noto Serif TC’, serif;
+font-size: 16px;
+font-weight: 700;
+color: var(–text);
+flex: 1;
+}
+.price-tag {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: var(–gold-pale);
+color: var(–gold-dark);
+border: 1px solid #E8C85A;
+border-radius: 20px;
+font-size: 14px;
+font-weight: 700;
+padding: 5px 14px;
+margin-bottom: 0;
+}
+.price-tag i { font-size: 13px; }
 
-  /* ── SPA SECTION ── */
-  .spa-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    margin-bottom: 14px;
-    overflow: hidden;
-    box-shadow: 0 2px 14px rgba(139,105,20,0.08);
-  }
-  .spa-header {
-    background: var(--dark2);
-    padding: 14px 16px 12px;
-    position: relative;
-    overflow: hidden;
-  }
-  .spa-header::after {
-    content:"";position:absolute;right:-15px;top:-15px;
-    width:70px;height:70px;border-radius:50%;
-    background:rgba(196,150,26,0.1);border:1px solid rgba(196,150,26,0.2);
-  }
-  .spa-name {
-    font-family: "Noto Serif TC", serif;
-    font-size: 15px; font-weight: 700;
-    color: var(--gold-light);
-    margin-bottom: 6px;
-  }
-  .spa-meta {
-    font-size: 11px; color: rgba(255,255,255,0.55);
-    display: flex; align-items: center; gap: 5px;
-    margin-bottom: 3px;
-  }
-  .spa-meta i { color: var(--gold); width: 12px; text-align:center; font-size:10px; }
-  .spa-body { padding: 12px 14px 14px; }
-  .spa-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  .spa-table thead tr { background: var(--surface2); }
-  .spa-table th {
-    padding: 7px 8px; text-align: left;
-    color: var(--gold-dark); font-weight: 700;
-    font-size: 11px; letter-spacing: 0.3px;
-    border-bottom: 1px solid #EDE3CC;
-  }
-  .spa-table td {
-    padding: 8px 8px; color: var(--text2); font-size: 12px;
-    border-bottom: 1px solid #F5EDD8; vertical-align: top;
-    line-height: 1.5;
-  }
-  .spa-table tr:last-child td { border-bottom: none; }
-  .spa-table td:first-child { color: var(--text); font-weight: 500; }
-  .tw-price { color: var(--gold-dark); font-weight: 700; white-space:nowrap; }
-  .spa-tip {
-    background: #FFFBF0; border: 1px solid #F0D898;
-    border-radius: var(--radius-sm);
-    padding: 9px 12px; margin-top: 10px;
-    font-size: 12px; color: #7A5C10; line-height: 1.7;
-    display: flex; gap: 7px; align-items: flex-start;
-  }
-  .spa-tip i { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
-  .spa-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
-  .call-btn {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--dark2); color: var(--gold-light);
-    font-size: 12px; font-weight: 500;
-    padding: 6px 14px; border-radius: 20px;
-    text-decoration: none; border: 1px solid rgba(196,150,26,0.3);
-    font-family: "Noto Sans TC", sans-serif;
-  }
-  .call-btn i { font-size: 11px; }
-  .price-note {
-    font-size: 11px; color: var(--text3);
-    padding: 4px 0; display: flex; align-items: flex-start; gap: 5px;
-  }
-  .price-note i { color: #E8B84B; margin-top:1px; flex-shrink:0; }
-  .notice-card {
-    background: #FFFBF0;
-    border: 1px solid #E8C85A;
-    border-radius: var(--radius-sm);
-    padding: 13px 15px;
-    margin-bottom: 8px;
-  }
+/* ── SPA SECTION ── */
+.spa-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+margin-bottom: 14px;
+overflow: hidden;
+box-shadow: 0 2px 14px rgba(139,105,20,0.08);
+}
+.spa-header {
+background: var(–dark2);
+padding: 14px 16px 12px;
+position: relative;
+overflow: hidden;
+}
+.spa-header::after {
+content:””;position:absolute;right:-15px;top:-15px;
+width:70px;height:70px;border-radius:50%;
+background:rgba(196,150,26,0.1);border:1px solid rgba(196,150,26,0.2);
+}
+.spa-name {
+font-family: “Noto Serif TC”, serif;
+font-size: 15px; font-weight: 700;
+color: var(–gold-light);
+margin-bottom: 6px;
+}
+.spa-meta {
+font-size: 11px; color: rgba(255,255,255,0.55);
+display: flex; align-items: center; gap: 5px;
+margin-bottom: 3px;
+}
+.spa-meta i { color: var(–gold); width: 12px; text-align:center; font-size:10px; }
+.spa-body { padding: 12px 14px 14px; }
+.spa-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.spa-table thead tr { background: var(–surface2); }
+.spa-table th {
+padding: 7px 8px; text-align: left;
+color: var(–gold-dark); font-weight: 700;
+font-size: 11px; letter-spacing: 0.3px;
+border-bottom: 1px solid #EDE3CC;
+}
+.spa-table td {
+padding: 8px 8px; color: var(–text2); font-size: 12px;
+border-bottom: 1px solid #F5EDD8; vertical-align: top;
+line-height: 1.5;
+}
+.spa-table tr:last-child td { border-bottom: none; }
+.spa-table td:first-child { color: var(–text); font-weight: 500; }
+.tw-price { color: var(–gold-dark); font-weight: 700; white-space:nowrap; }
+.spa-tip {
+background: #FFFBF0; border: 1px solid #F0D898;
+border-radius: var(–radius-sm);
+padding: 9px 12px; margin-top: 10px;
+font-size: 12px; color: #7A5C10; line-height: 1.7;
+display: flex; gap: 7px; align-items: flex-start;
+}
+.spa-tip i { color: var(–gold); flex-shrink: 0; margin-top: 2px; }
+.spa-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.call-btn {
+display: inline-flex; align-items: center; gap: 6px;
+background: var(–dark2); color: var(–gold-light);
+font-size: 12px; font-weight: 500;
+padding: 6px 14px; border-radius: 20px;
+text-decoration: none; border: 1px solid rgba(196,150,26,0.3);
+font-family: “Noto Sans TC”, sans-serif;
+}
+.call-btn i { font-size: 11px; }
+.price-note {
+font-size: 11px; color: var(–text3);
+padding: 4px 0; display: flex; align-items: flex-start; gap: 5px;
+}
+.price-note i { color: #E8B84B; margin-top:1px; flex-shrink:0; }
+.notice-card {
+background: #FFFBF0;
+border: 1px solid #E8C85A;
+border-radius: var(–radius-sm);
+padding: 13px 15px;
+margin-bottom: 8px;
+}
 
-  /* ── SPA CARDS ── */
-  .spa-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-bottom: 14px;
-    box-shadow: 0 2px 14px rgba(139,105,20,0.08);
-  }
-  .spa-header {
-    background: var(--dark2);
-    padding: 14px 16px;
-    position: relative;
-    overflow: hidden;
-  }
-  .spa-header::after {
-    content:'';
-    position:absolute; right:-16px; top:-16px;
-    width:80px; height:80px;
-    border-radius:50%;
-    background:rgba(196,150,26,0.08);
-    border:1px solid rgba(196,150,26,0.15);
-  }
-  .spa-badge {
-    display:inline-flex; align-items:center; gap:5px;
-    background:rgba(196,150,26,0.2);
-    border:1px solid rgba(196,150,26,0.35);
-    color:var(--gold-light);
-    font-size:10px; font-weight:700;
-    padding:2px 9px; border-radius:20px;
-    letter-spacing:0.5px; margin-bottom:6px;
-  }
-  .spa-name {
-    font-family:'Noto Serif TC',serif;
-    font-size:15px; font-weight:700;
-    color:var(--white); line-height:1.3;
-  }
-  .spa-meta {
-    font-size:11px; color:rgba(255,255,255,0.5);
-    margin-top:5px; display:flex; flex-direction:column; gap:2px;
-  }
-  .spa-meta span { display:flex; align-items:center; gap:5px; }
-  .spa-meta i { color:var(--gold); font-size:10px; width:12px; }
-  .spa-body { padding:14px 16px; }
-  .spa-table {
-    width:100%; border-collapse:collapse;
-    font-size:12px; margin-bottom:10px;
-  }
-  .spa-table thead tr {
-    background:var(--surface2);
-  }
-  .spa-table th {
-    padding:7px 8px; text-align:left;
-    color:var(--gold-dark); font-weight:700;
-    font-size:11px; letter-spacing:0.5px;
-    border-bottom:1px solid #EDE3CC;
-  }
-  .spa-table th:last-child, .spa-table td:last-child { text-align:right; }
-  .spa-table td {
-    padding:7px 8px; color:var(--text2);
-    border-bottom:1px solid #F5EDD8;
-    vertical-align:top; line-height:1.4;
-  }
-  .spa-table tr:last-child td { border-bottom:none; }
-  .spa-price {
-    font-weight:700; color:var(--gold-dark);
-    white-space:nowrap;
-  }
-  .spa-tip {
-    background:#FFFBF0; border:1px solid #F0D898;
-    border-radius:var(--radius-sm);
-    padding:8px 12px; font-size:12px;
-    color:#7A5C10; line-height:1.6;
-    display:flex; gap:7px; align-items:flex-start;
-    margin-bottom:8px;
-  }
-  .spa-tip i { color:var(--gold); flex-shrink:0; margin-top:2px; }
-  .spa-actions {
-    display:flex; gap:8px; flex-wrap:wrap;
-  }
-  .call-btn {
-    display:inline-flex; align-items:center; gap:6px;
-    background:var(--dark2); color:var(--gold-light);
-    font-size:12px; font-weight:500;
-    padding:6px 14px; border-radius:20px;
-    text-decoration:none; border:1px solid rgba(196,150,26,0.3);
-    font-family:'Noto Sans TC',sans-serif;
-  }
-  .call-btn:active { transform:scale(0.96); }
-  .call-btn i { font-size:11px; }
-  .notice-card-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gold-dark);
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 5px;
-  }
-  .notice-card-body {
-    font-size: 13px;
-    color: var(--text2);
-    line-height: 1.8;
-  }
+/* ── SPA CARDS ── */
+.spa-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+overflow: hidden;
+margin-bottom: 14px;
+box-shadow: 0 2px 14px rgba(139,105,20,0.08);
+}
+.spa-header {
+background: var(–dark2);
+padding: 14px 16px;
+position: relative;
+overflow: hidden;
+}
+.spa-header::after {
+content:’’;
+position:absolute; right:-16px; top:-16px;
+width:80px; height:80px;
+border-radius:50%;
+background:rgba(196,150,26,0.08);
+border:1px solid rgba(196,150,26,0.15);
+}
+.spa-badge {
+display:inline-flex; align-items:center; gap:5px;
+background:rgba(196,150,26,0.2);
+border:1px solid rgba(196,150,26,0.35);
+color:var(–gold-light);
+font-size:10px; font-weight:700;
+padding:2px 9px; border-radius:20px;
+letter-spacing:0.5px; margin-bottom:6px;
+}
+.spa-name {
+font-family:‘Noto Serif TC’,serif;
+font-size:15px; font-weight:700;
+color:var(–white); line-height:1.3;
+}
+.spa-meta {
+font-size:11px; color:rgba(255,255,255,0.5);
+margin-top:5px; display:flex; flex-direction:column; gap:2px;
+}
+.spa-meta span { display:flex; align-items:center; gap:5px; }
+.spa-meta i { color:var(–gold); font-size:10px; width:12px; }
+.spa-body { padding:14px 16px; }
+.spa-table {
+width:100%; border-collapse:collapse;
+font-size:12px; margin-bottom:10px;
+}
+.spa-table thead tr {
+background:var(–surface2);
+}
+.spa-table th {
+padding:7px 8px; text-align:left;
+color:var(–gold-dark); font-weight:700;
+font-size:11px; letter-spacing:0.5px;
+border-bottom:1px solid #EDE3CC;
+}
+.spa-table th:last-child, .spa-table td:last-child { text-align:right; }
+.spa-table td {
+padding:7px 8px; color:var(–text2);
+border-bottom:1px solid #F5EDD8;
+vertical-align:top; line-height:1.4;
+}
+.spa-table tr:last-child td { border-bottom:none; }
+.spa-price {
+font-weight:700; color:var(–gold-dark);
+white-space:nowrap;
+}
+.spa-tip {
+background:#FFFBF0; border:1px solid #F0D898;
+border-radius:var(–radius-sm);
+padding:8px 12px; font-size:12px;
+color:#7A5C10; line-height:1.6;
+display:flex; gap:7px; align-items:flex-start;
+margin-bottom:8px;
+}
+.spa-tip i { color:var(–gold); flex-shrink:0; margin-top:2px; }
+.spa-actions {
+display:flex; gap:8px; flex-wrap:wrap;
+}
+.call-btn {
+display:inline-flex; align-items:center; gap:6px;
+background:var(–dark2); color:var(–gold-light);
+font-size:12px; font-weight:500;
+padding:6px 14px; border-radius:20px;
+text-decoration:none; border:1px solid rgba(196,150,26,0.3);
+font-family:‘Noto Sans TC’,sans-serif;
+}
+.call-btn:active { transform:scale(0.96); }
+.call-btn i { font-size:11px; }
+.notice-card-title {
+font-size: 13px;
+font-weight: 700;
+color: var(–gold-dark);
+display: flex;
+align-items: center;
+gap: 7px;
+margin-bottom: 5px;
+}
+.notice-card-body {
+font-size: 13px;
+color: var(–text2);
+line-height: 1.8;
+}
 
-  /* ── HERO CIRCLE IMAGE ── */
-  .hero-circle-img {
-    position: absolute;
-    right: -35px;
-    top: -22px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid rgba(196,150,26,0.45);
-    box-shadow: 0 0 0 5px rgba(196,150,26,0.08);
-    z-index: 0;
-    pointer-events: none;
-  }
-  .hero-circle-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    opacity: 0.5;
-    mix-blend-mode: luminosity;
-  }
-  .day-num, .day-main-title, .day-subtitle, .day-meals-strip {
-    position: relative;
-    z-index: 1;
-  }
-  /* ── SPOT CARD: LEFT IMAGE RIGHT TEXT ── */
-  .spot-card-inner {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .spot-thumb {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-  }
-  .spot-card-text {
-    flex: 1;
-    min-width: 0;
-  }
+/* ── HERO CIRCLE IMAGE ── */
+.hero-circle-img {
+position: absolute;
+right: -35px;
+top: -22px;
+width: 180px;
+height: 180px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid rgba(196,150,26,0.45);
+box-shadow: 0 0 0 5px rgba(196,150,26,0.08);
+z-index: 0;
+pointer-events: none;
+}
+.hero-circle-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+opacity: 0.5;
+mix-blend-mode: luminosity;
+}
 
-  .member-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    overflow: hidden;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 12px rgba(139,105,20,0.08);
-  }
-  .member-header {
-    background: var(--dark2);
-    padding: 13px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .member-avatar {
-    width: 42px; height: 42px;
-    border-radius: 50%;
-    background: #C4961A;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; font-weight: 500;
-    color: var(--dark); flex-shrink: 0;
-    font-family: 'Noto Serif TC', serif;
-  }
-  .member-name {
-    font-size: 17px; font-weight: 500;
-    color: #F5E9C8;
-    font-family: 'Noto Serif TC', serif;
-  }
-  .member-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .member-cell {
-    padding: 12px 16px;
-    border-bottom: 0.5px solid #F0E8D0;
-    border-right: 0.5px solid #F0E8D0;
-  }
-  .member-cell:nth-child(even) { border-right: none; }
-  .member-cell-full {
-    padding: 12px 16px;
-    border-bottom: 0.5px solid #F0E8D0;
-    grid-column: 1 / -1;
-  }
-  .member-cell:last-child, .member-cell-full:last-child { border-bottom: none; }
-  .mc-label {
-    font-size: 11px; color: var(--text3);
-    letter-spacing: 0.5px; margin-bottom: 5px;
-    display: flex; align-items: center; gap: 5px;
-  }
-  .mc-label i { font-size: 11px; color: var(--gold); }
-  .mc-val { font-size: 20px; font-weight: 500; color: var(--gold); }
-  .mc-val-sm { font-size: 14px; font-weight: 500; color: var(--text); }
-  .shuttle-tag {
-    display: inline-block;
-    font-size: 12px; font-weight: 500;
-    padding: 3px 12px; border-radius: 20px;
-    margin-right: 8px;
-  }
-  .tag-yes { background: #E1F5EE; color: #0F6E56; }
-  .tag-no  { background: #F1EFE8; color: #5F5E5A; }
-  .not-found-card {
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    padding: 2rem 1rem;
-    text-align: center;
-    color: var(--text2);
-    font-size: 14px;
-  }
-  .not-found-card i { font-size: 32px; color: var(--text3); display: block; margin-bottom: 10px; }
-  .multi-item {
-    display: flex; align-items: center; gap: 12px;
-    background: var(--white);
-    border: 1px solid #EDE3CC;
-    border-radius: var(--radius);
-    padding: 12px 16px;
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
-  .multi-item:active { transform: scale(0.98); }
-  .multi-avatar {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: var(--dark2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px; font-weight: 500;
-    color: var(--gold); flex-shrink: 0;
-  }
-  .multi-name { font-size: 14px; font-weight: 500; color: var(--text); }
-  .multi-info { font-size: 12px; color: var(--text3); margin-top: 2px; }
+/* ── WEATHER WIDGET ── */
+.weather-widget {
+position: absolute;
+z-index: 2;
+text-align: center;
+width: 34px;
+}
+/* Day1,2,5 - 文字短，天氣框放 right:148px top:28px */
+.weather-widget.wx-left  { right: 175px; top: 30px; }
+.weather-widget.wx-bottom { right: 175px; top: 30px; }
+.weather-icon { font-size: 20px; line-height: 1; }
+.weather-temp {
+font-size: 11px; font-weight: 700;
+color: #FFFFFF; margin-top: 3px;
+text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+white-space: nowrap;
+}
+.weather-loading { font-size: 9px; color: rgba(255,255,255,0.45); }
+.weather-box {
+background: transparent;
+border: none;
+border-radius: 7px;
+padding: 5px 4px 6px;
+display: inline-block;
+min-width: 34px;
+}
 
+.day-num, .day-main-title, .day-subtitle, .day-meals-strip {
+position: relative;
+z-index: 1;
+}
+/* ── SPOT CARD: LEFT IMAGE RIGHT TEXT ── */
+.spot-card-inner {
+display: flex;
+gap: 12px;
+align-items: flex-start;
+}
+.spot-thumb {
+width: 80px;
+height: 80px;
+border-radius: 10px;
+object-fit: cover;
+flex-shrink: 0;
+display: block;
+}
+.spot-card-text {
+flex: 1;
+min-width: 0;
+}
 
-  /* ── LOOKUP SCREEN ── */
-  .lookup-hero{background:var(--dark2);padding:20px 20px 16px;position:relative;overflow:hidden}
-  .lookup-search-wrap{padding:16px 16px 0}
-  .lookup-input-row{display:flex;gap:8px;margin-bottom:0}
-  .lookup-input{flex:1;height:44px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(--radius);background:var(--white);color:var(--text);outline:none;font-family:'Noto Sans TC',sans-serif}
-  .lookup-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,150,26,0.12)}
-  .lookup-btn{height:44px;padding:0 18px;background:var(--gold);color:var(--dark);font-size:14px;font-weight:500;border:none;border-radius:var(--radius);cursor:pointer;font-family:'Noto Sans TC',sans-serif;flex-shrink:0}
-  .lookup-btn:active{transform:scale(0.97)}
-  .lookup-result{padding:14px 16px 0}
-  .lcard{background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 14px rgba(139,105,20,0.08)}
-  .lcard-header{background:#2C2416;padding:14px 16px;display:flex;align-items:center;gap:12px}
-  .lcard-avatar{width:44px;height:44px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:var(--dark);flex-shrink:0;font-family:'Noto Serif TC',serif}
-  .lcard-name{font-size:18px;font-weight:500;color:#F5E9C8;font-family:'Noto Serif TC',serif}
-  .lcard-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #EDE3CC}
-  .lcard-cell{padding:12px 14px;border-right:1px solid #EDE3CC;border-bottom:1px solid #EDE3CC}
-  .lcard-cell:nth-child(even){border-right:none}
-  .lcard-cell:nth-last-child(-n+2){border-bottom:none}
-  .lcard-cell-full{grid-column:1/-1;padding:12px 14px;border-bottom:1px solid #EDE3CC}
-  .lcard-cell-full:last-child{border-bottom:none}
-  .lcell-label{font-size:11px;color:var(--text3);letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}
-  .lcell-val{font-size:22px;font-weight:700;color:var(--gold)}
-  .lcell-val-sm{font-size:14px;font-weight:500;color:var(--text)}
-  .lcell-airline{display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);color:var(--gold-dark);border:1px solid #E8C85A;border-radius:20px;font-size:13px;font-weight:500;padding:4px 12px;margin-top:2px}
-  .shuttle-row2{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid #EDE3CC}
-  .shuttle-row2:last-child{border-bottom:none}
-  .shuttle-label2{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:6px}
-  .shuttle-label2 i{color:var(--gold);font-size:12px;width:14px;text-align:center}
-  .stag-yes{background:#E1F5EE;color:#0F6E56;font-size:12px;font-weight:500;padding:3px 10px;border-radius:20px}
-  .stag-no{background:#F1EFE8;color:#5F5E5A;font-size:12px;padding:3px 10px;border-radius:20px}
-  .gather-box{background:#FFF8E8;border:1px solid #E8C85A;border-radius:var(--radius-sm);padding:11px 14px;margin:10px 16px 0;display:flex;gap:9px;align-items:flex-start}
-  .gather-box i{color:var(--gold-dark);flex-shrink:0;margin-top:2px;font-size:14px}
-  .gather-text{font-size:13px;color:#7A5C10;line-height:1.7}
-  .gather-text strong{color:#5A420A}
-  .lmulti{display:flex;flex-direction:column;gap:8px}
-  .lmulti-card{background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer}
-  .lmulti-card:active{transform:scale(0.98)}
-  .lmulti-av{width:36px;height:36px;border-radius:50%;background:#2C2416;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(--gold);flex-shrink:0}
-  .lmulti-name{font-size:14px;font-weight:500;color:var(--text)}
-  .lmulti-info{font-size:12px;color:var(--text3);margin-top:2px}
-  .lnone{text-align:center;padding:2rem 1rem;color:var(--text2);font-size:14px;background:var(--white);border:1px solid #EDE3CC;border-radius:var(--radius)}
-  .lnone i{display:block;font-size:28px;color:var(--text3);margin-bottom:8px}
+.member-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+overflow: hidden;
+margin-bottom: 10px;
+box-shadow: 0 2px 12px rgba(139,105,20,0.08);
+}
+.member-header {
+background: var(–dark2);
+padding: 13px 16px;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.member-avatar {
+width: 42px; height: 42px;
+border-radius: 50%;
+background: #C4961A;
+display: flex; align-items: center; justify-content: center;
+font-size: 17px; font-weight: 500;
+color: var(–dark); flex-shrink: 0;
+font-family: ‘Noto Serif TC’, serif;
+}
+.member-name {
+font-size: 17px; font-weight: 500;
+color: #F5E9C8;
+font-family: ‘Noto Serif TC’, serif;
+}
+.member-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.member-cell {
+padding: 12px 16px;
+border-bottom: 0.5px solid #F0E8D0;
+border-right: 0.5px solid #F0E8D0;
+}
+.member-cell:nth-child(even) { border-right: none; }
+.member-cell-full {
+padding: 12px 16px;
+border-bottom: 0.5px solid #F0E8D0;
+grid-column: 1 / -1;
+}
+.member-cell:last-child, .member-cell-full:last-child { border-bottom: none; }
+.mc-label {
+font-size: 11px; color: var(–text3);
+letter-spacing: 0.5px; margin-bottom: 5px;
+display: flex; align-items: center; gap: 5px;
+}
+.mc-label i { font-size: 11px; color: var(–gold); }
+.mc-val { font-size: 20px; font-weight: 500; color: var(–gold); }
+.mc-val-sm { font-size: 14px; font-weight: 500; color: var(–text); }
+.shuttle-tag {
+display: inline-block;
+font-size: 12px; font-weight: 500;
+padding: 3px 12px; border-radius: 20px;
+margin-right: 8px;
+}
+.tag-yes { background: #E1F5EE; color: #0F6E56; }
+.tag-no  { background: #F1EFE8; color: #5F5E5A; }
+.not-found-card {
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+padding: 2rem 1rem;
+text-align: center;
+color: var(–text2);
+font-size: 14px;
+}
+.not-found-card i { font-size: 32px; color: var(–text3); display: block; margin-bottom: 10px; }
+.multi-item {
+display: flex; align-items: center; gap: 12px;
+background: var(–white);
+border: 1px solid #EDE3CC;
+border-radius: var(–radius);
+padding: 12px 16px;
+margin-bottom: 8px;
+cursor: pointer;
+}
+.multi-item:active { transform: scale(0.98); }
+.multi-avatar {
+width: 36px; height: 36px; border-radius: 50%;
+background: var(–dark2);
+display: flex; align-items: center; justify-content: center;
+font-size: 14px; font-weight: 500;
+color: var(–gold); flex-shrink: 0;
+}
+.multi-name { font-size: 14px; font-weight: 500; color: var(–text); }
+.multi-info { font-size: 12px; color: var(–text3); margin-top: 2px; }
+
+/* ── LOOKUP SCREEN ── */
+.lookup-hero{background:var(–dark2);padding:20px 20px 16px;position:relative;overflow:hidden}
+.lookup-search-wrap{padding:16px 16px 0}
+.lookup-input-row{display:flex;gap:8px;margin-bottom:0}
+.lookup-input{flex:1;height:44px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(–radius);background:var(–white);color:var(–text);outline:none;font-family:‘Noto Sans TC’,sans-serif}
+.lookup-input:focus{border-color:var(–gold);box-shadow:0 0 0 3px rgba(196,150,26,0.12)}
+.lookup-btn{height:44px;padding:0 18px;background:var(–gold);color:var(–dark);font-size:14px;font-weight:500;border:none;border-radius:var(–radius);cursor:pointer;font-family:‘Noto Sans TC’,sans-serif;flex-shrink:0}
+.lookup-btn:active{transform:scale(0.97)}
+.lookup-result{padding:14px 16px 0}
+.lcard{background:var(–white);border:1px solid #EDE3CC;border-radius:var(–radius);overflow:hidden;box-shadow:0 2px 14px rgba(139,105,20,0.08)}
+.lcard-header{background:#2C2416;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.lcard-avatar{width:44px;height:44px;border-radius:50%;background:var(–gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:500;color:var(–dark);flex-shrink:0;font-family:‘Noto Serif TC’,serif}
+.lcard-name{font-size:18px;font-weight:500;color:#F5E9C8;font-family:‘Noto Serif TC’,serif}
+.lcard-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #EDE3CC}
+.lcard-cell{padding:12px 14px;border-right:1px solid #EDE3CC;border-bottom:1px solid #EDE3CC}
+.lcard-cell:nth-child(even){border-right:none}
+.lcard-cell:nth-last-child(-n+2){border-bottom:none}
+.lcard-cell-full{grid-column:1/-1;padding:12px 14px;border-bottom:1px solid #EDE3CC}
+.lcard-cell-full:last-child{border-bottom:none}
+.lcell-label{font-size:11px;color:var(–text3);letter-spacing:0.5px;margin-bottom:4px;text-transform:uppercase}
+.lcell-val{font-size:22px;font-weight:700;color:var(–gold)}
+.lcell-val-sm{font-size:14px;font-weight:500;color:var(–text)}
+.lcell-airline{display:inline-flex;align-items:center;gap:6px;background:var(–gold-pale);color:var(–gold-dark);border:1px solid #E8C85A;border-radius:20px;font-size:13px;font-weight:500;padding:4px 12px;margin-top:2px}
+.shuttle-row2{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid #EDE3CC}
+.shuttle-row2:last-child{border-bottom:none}
+.shuttle-label2{font-size:13px;color:var(–text2);display:flex;align-items:center;gap:6px}
+.shuttle-label2 i{color:var(–gold);font-size:12px;width:14px;text-align:center}
+.stag-yes{background:#E1F5EE;color:#0F6E56;font-size:12px;font-weight:500;padding:3px 10px;border-radius:20px}
+.stag-no{background:#F1EFE8;color:#5F5E5A;font-size:12px;padding:3px 10px;border-radius:20px}
+.gather-box{background:#FFF8E8;border:1px solid #E8C85A;border-radius:var(–radius-sm);padding:11px 14px;margin:10px 16px 0;display:flex;gap:9px;align-items:flex-start}
+.gather-box i{color:var(–gold-dark);flex-shrink:0;margin-top:2px;font-size:14px}
+.gather-text{font-size:13px;color:#7A5C10;line-height:1.7}
+.gather-text strong{color:#5A420A}
+.lmulti{display:flex;flex-direction:column;gap:8px}
+.lmulti-card{background:var(–white);border:1px solid #EDE3CC;border-radius:var(–radius);padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer}
+.lmulti-card:active{transform:scale(0.98)}
+.lmulti-av{width:36px;height:36px;border-radius:50%;background:#2C2416;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:var(–gold);flex-shrink:0}
+.lmulti-name{font-size:14px;font-weight:500;color:var(–text)}
+.lmulti-info{font-size:12px;color:var(–text3);margin-top:2px}
+.lnone{text-align:center;padding:2rem 1rem;color:var(–text2);font-size:14px;background:var(–white);border:1px solid #EDE3CC;border-radius:var(–radius)}
+.lnone i{display:block;font-size:28px;color:var(–text3);margin-bottom:8px}
 </style>
+
 </head>
 <body>
 <div class="app-shell">
 
   <!-- HEADER -->
+
   <div class="app-header">
     <div class="header-bg"></div>
     <div class="header-pattern"></div>
@@ -1025,6 +1061,7 @@
   </div>
 
   <!-- NAV TABS -->
+
   <nav class="nav-tabs" id="navTabs">
     <button class="nav-tab active"   onclick="showScreen('overview',this)"><i class="fa-solid fa-house"></i>總覽</button>
     <button class="nav-tab"          onclick="showScreen('day1',this)"><i class="fa-solid fa-calendar-day"></i>Day 1</button>
@@ -1032,811 +1069,919 @@
     <button class="nav-tab"          onclick="showScreen('day3',this)"><i class="fa-solid fa-calendar-day"></i>Day 3</button>
     <button class="nav-tab"          onclick="showScreen('day4',this)"><i class="fa-solid fa-calendar-day"></i>Day 4</button>
     <button class="nav-tab"          onclick="showScreen('day5',this)"><i class="fa-solid fa-calendar-day"></i>Day 5</button>
+    <button class="nav-tab"          onclick="showScreen('tools',this)"><i class="fa-solid fa-screwdriver-wrench"></i>工具</button>
     <button class="nav-tab"          onclick="showScreen('optional',this)"><i class="fa-solid fa-tag"></i>自費</button>
     <button class="nav-tab"          onclick="showScreen('contact',this)"><i class="fa-solid fa-phone"></i>聯絡</button>
     <button class="nav-tab"          onclick="showScreen('notes',this)"><i class="fa-solid fa-circle-info"></i>提醒</button>
   </nav>
 
   <!-- BODY -->
+
   <div class="app-body">
 
-    <!-- ══ OVERVIEW ══ -->
-    <div id="screen-overview" class="screen active">
-      <div class="overview-hero">
-        <div class="overview-bg-circle">
-          <div class="overview-circle-big">
-            <img loading="lazy" decoding="async" src="photo/hoi-an-overview.jpg" alt="" onerror="this.parentElement.style.display='none'">
-          </div>
-          <div class="overview-circle-small">
-            <img loading="lazy" decoding="async" src="photo/overview-circle-2.jpg" alt="" onerror="this.parentElement.style.display='none'">
-          </div>
-        </div>
-        <div class="overview-title">越南<span>峴港</span><br>五日之旅</div>
-        <div class="overview-meta">2026年4月25日（六）出發<br>2026年4月29日（三）回程</div>
-        <div class="overview-stats">
-          <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">天</div></div>
-          <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">景點</div></div>
-          <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">飯店</div></div>
-        </div>
+```
+<!-- ══ OVERVIEW ══ -->
+<div id="screen-overview" class="screen active">
+  <div class="overview-hero">
+    <div class="overview-bg-circle">
+      <div class="overview-circle-big">
+        <img loading="lazy" decoding="async" src="photo/hoi-an-overview.jpg" alt="" onerror="this.parentElement.style.display='none'">
       </div>
+      <div class="overview-circle-small">
+        <img loading="lazy" decoding="async" src="photo/overview-circle-2.jpg" alt="" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <div class="overview-title">越南<span>峴港</span><br>五日之旅</div>
+    <div class="overview-meta">2026年4月25日（六）出發<br>2026年4月29日（三）回程</div>
+    <div class="overview-stats" id="overview-weather">
+      <div class="stat-box" id="ow-day1"><div class="stat-date">4/25 六</div><div class="stat-icon">⏳</div><div class="stat-high">--°</div><div class="stat-low">--°</div><div class="stat-rain"></div></div>
+      <div class="stat-box" id="ow-day2"><div class="stat-date">4/26 日</div><div class="stat-icon">⏳</div><div class="stat-high">--°</div><div class="stat-low">--°</div><div class="stat-rain"></div></div>
+      <div class="stat-box" id="ow-day3"><div class="stat-date">4/27 一</div><div class="stat-icon">⏳</div><div class="stat-high">--°</div><div class="stat-low">--°</div><div class="stat-rain"></div></div>
+      <div class="stat-box" id="ow-day4"><div class="stat-date">4/28 二</div><div class="stat-icon">⏳</div><div class="stat-high">--°</div><div class="stat-low">--°</div><div class="stat-rain"></div></div>
+      <div class="stat-box" id="ow-day5"><div class="stat-date">4/29 三</div><div class="stat-icon">⏳</div><div class="stat-high">--°</div><div class="stat-low">--°</div><div class="stat-rain"></div></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-top:6px;position:relative;z-index:1">
+      <div style="font-size:9px;color:rgba(255,255,255,0.3);">圖示 · 最高° · 最低° · 降雨率</div>
+      <div style="font-size:9px;color:rgba(255,255,255,0.3)" id="ow-update"></div>
+    </div>
+  </div>
 
 
-      <!-- ── SEARCH BOX ── -->
-      <div style="padding:16px 16px 0">
-        <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px">
-          <i class="fa-solid fa-magnifying-glass" style="font-size:11px"></i> 個人資訊查詢
-        </div>
-        <div style="display:flex;gap:8px">
-          <input id="lookupInput" type="text" placeholder="輸入姓名…"
-            style="flex:1;height:42px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(--radius);background:var(--white);color:var(--text);outline:none;font-family:inherit;box-shadow:0 1px 6px rgba(139,105,20,0.06)"
-            oninput="doLookup()" autocomplete="off">
-          <button onclick="doLookup()"
-            style="height:42px;padding:0 16px;background:var(--gold);color:var(--dark);border:none;border-radius:var(--radius);cursor:pointer;font-size:14px;font-weight:500;font-family:inherit;flex-shrink:0">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-      </div>
-      <div id="lookupResult" style="padding:0 16px"></div>
+  <!-- ── SEARCH BOX ── -->
+  <div style="padding:16px 16px 0">
+    <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px">
+      <i class="fa-solid fa-magnifying-glass" style="font-size:11px"></i> 個人資訊查詢
+    </div>
+    <div style="display:flex;gap:8px">
+      <input id="lookupInput" type="text" placeholder="輸入姓名…"
+        style="flex:1;height:42px;padding:0 14px;font-size:15px;border:1px solid #EDE3CC;border-radius:var(--radius);background:var(--white);color:var(--text);outline:none;font-family:inherit;box-shadow:0 1px 6px rgba(139,105,20,0.06)"
+        oninput="doLookup()" autocomplete="off">
+      <button onclick="doLookup()"
+        style="height:42px;padding:0 16px;background:var(--gold);color:var(--dark);border:none;border-radius:var(--radius);cursor:pointer;font-size:14px;font-weight:500;font-family:inherit;flex-shrink:0">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+  </div>
+  <div id="lookupResult" style="padding:0 16px"></div>
 
-      <div class="overview-section-title"><i class="fa-solid fa-route"></i> 每日行程總覽</div>
-      <div class="day-list-item" onclick="showScreen('day1',document.querySelectorAll('.nav-tab')[1])">
-        <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">1</div></div>
-        <div class="day-list-info">
-          <div class="day-list-title">抵達峴港・城市探索</div>
-          <div class="day-list-sub">龍橋・粉紅大教堂・山茶半島</div>
-        </div>
-        <i class="fa-solid fa-chevron-right day-list-arrow"></i>
-      </div>
-      <div class="day-list-item" onclick="showScreen('day2',document.querySelectorAll('.nav-tab')[2])">
-        <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">2</div></div>
-        <div class="day-list-info">
-          <div class="day-list-title">會安古鎮・迦南島生態</div>
-          <div class="day-list-sub">竹籃船體驗・來遠橋・廣筆會館</div>
-        </div>
-        <i class="fa-solid fa-chevron-right day-list-arrow"></i>
-      </div>
-      <div class="day-list-item" onclick="showScreen('day3',document.querySelectorAll('.nav-tab')[3])">
-        <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">3</div></div>
-        <div class="day-list-info">
-          <div class="day-list-title">巴拿山・黃金橋</div>
-          <div class="day-list-sub">纜車・黃金橋・夢想樂園 Fantasy Park</div>
-        </div>
-        <i class="fa-solid fa-chevron-right day-list-arrow"></i>
-      </div>
-      <div class="day-list-item" onclick="showScreen('day4',document.querySelectorAll('.nav-tab')[4])">
-        <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">4</div></div>
-        <div class="day-list-info">
-          <div class="day-list-title">五行山・購物</div>
-          <div class="day-list-sub">五行山・韓江市場・VINCOM PLAZA</div>
-        </div>
-        <i class="fa-solid fa-chevron-right day-list-arrow"></i>
-      </div>
-      <div class="day-list-item" onclick="showScreen('day5',document.querySelectorAll('.nav-tab')[5])">
-        <div class="day-badge" style="background:#888"><div class="d-num">DAY</div><div class="d-date">5</div></div>
-        <div class="day-list-info">
-          <div class="day-list-title">自由時光・返程</div>
-          <div class="day-list-sub">飯店設施・峴港機場・飛回桃園</div>
-        </div>
-        <i class="fa-solid fa-chevron-right day-list-arrow"></i>
-      </div>
+  <div class="overview-section-title"><i class="fa-solid fa-route"></i> 每日行程總覽</div>
+  <div class="day-list-item" onclick="showScreen('day1',document.querySelectorAll('.nav-tab')[1])">
+    <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">1</div></div>
+    <div class="day-list-info">
+      <div class="day-list-title">抵達峴港・城市探索</div>
+      <div class="day-list-sub">龍橋・粉紅大教堂・山茶半島</div>
+    </div>
+    <i class="fa-solid fa-chevron-right day-list-arrow"></i>
+  </div>
+  <div class="day-list-item" onclick="showScreen('day2',document.querySelectorAll('.nav-tab')[2])">
+    <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">2</div></div>
+    <div class="day-list-info">
+      <div class="day-list-title">會安古鎮・迦南島生態</div>
+      <div class="day-list-sub">竹籃船體驗・來遠橋・廣筆會館</div>
+    </div>
+    <i class="fa-solid fa-chevron-right day-list-arrow"></i>
+  </div>
+  <div class="day-list-item" onclick="showScreen('day3',document.querySelectorAll('.nav-tab')[3])">
+    <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">3</div></div>
+    <div class="day-list-info">
+      <div class="day-list-title">巴拿山・黃金橋</div>
+      <div class="day-list-sub">纜車・黃金橋・夢想樂園 Fantasy Park</div>
+    </div>
+    <i class="fa-solid fa-chevron-right day-list-arrow"></i>
+  </div>
+  <div class="day-list-item" onclick="showScreen('day4',document.querySelectorAll('.nav-tab')[4])">
+    <div class="day-badge"><div class="d-num">DAY</div><div class="d-date">4</div></div>
+    <div class="day-list-info">
+      <div class="day-list-title">五行山・購物</div>
+      <div class="day-list-sub">五行山・韓江市場・VINCOM PLAZA</div>
+    </div>
+    <i class="fa-solid fa-chevron-right day-list-arrow"></i>
+  </div>
+  <div class="day-list-item" onclick="showScreen('day5',document.querySelectorAll('.nav-tab')[5])">
+    <div class="day-badge" style="background:#888"><div class="d-num">DAY</div><div class="d-date">5</div></div>
+    <div class="day-list-info">
+      <div class="day-list-title">自由時光・返程</div>
+      <div class="day-list-sub">飯店設施・峴港機場・飛回桃園</div>
+    </div>
+    <i class="fa-solid fa-chevron-right day-list-arrow"></i>
+  </div>
 
-      <div class="overview-section-title"><i class="fa-solid fa-triangle-exclamation"></i> 出發資訊</div>
-      <div style="margin: 0 16px;">
-        <div class="alert-box">
-          <i class="fa-solid fa-bus alert-icon"></i>
-          <div class="alert-text"><strong>接駁車：</strong>4月25日 凌晨 3:45 發車<br>新北市新店區民權路88號（第一銀行／門口）</div>
-        </div>
-        <div class="alert-box">
-          <i class="fa-solid fa-plane-departure alert-icon"></i>
-          <div class="alert-text"><strong>長榮：</strong>第二航廈 20號 凌晨 4:45 集合<br><strong>中華：</strong>第一航廈 11號 凌晨 4:45 集合</div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
+  <div class="overview-section-title"><i class="fa-solid fa-triangle-exclamation"></i> 出發資訊</div>
+  <div style="margin: 0 16px;">
+    <div class="alert-box">
+      <i class="fa-solid fa-bus alert-icon"></i>
+      <div class="alert-text"><strong>接駁車：</strong>4月25日 凌晨 3:45 發車<br>新北市新店區民權路88號（第一銀行／門口）</div>
+    </div>
+    <div class="alert-box">
+      <i class="fa-solid fa-plane-departure alert-icon"></i>
+      <div class="alert-text"><strong>長榮：</strong>第二航廈 20號 凌晨 4:45 集合<br><strong>中華：</strong>第一航廈 11號 凌晨 4:45 集合</div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+
+<!-- ══ DAY 1 ══ -->
+<div id="screen-day1" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day1-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="weather-widget wx-left" id="weather-day1"><div class="weather-box"><div class="weather-loading">⏳</div></div></div>
+    <div class="day-num">DAY 1 · 4月25日（六）</div>
+    <div class="day-main-title">抵達峴港<br>探索城市地標</div>
+    <div class="day-subtitle"><i class="fa-solid fa-plane-arrival" style="color:var(--gold);margin-right:4px"></i>桃園機場 → 峴港機場</div>
+    <div class="day-meals-strip">
+      <div class="meal-chip"><span>早</span>機上套餐</div>
+      <div class="meal-chip"><span>午</span>越式風味餐</div>
+      <div class="meal-chip"><span>晚</span>會安陶先</div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="section-title">景點</div>
+      <div class="section-line"></div>
     </div>
 
-
-    <!-- ══ DAY 1 ══ -->
-    <div id="screen-day1" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day1-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">DAY 1 · 4月25日（六）</div>
-        <div class="day-main-title">抵達峴港<br>探索城市地標</div>
-        <div class="day-subtitle"><i class="fa-solid fa-plane-arrival" style="color:var(--gold);margin-right:4px"></i>桃園機場 → 峴港機場</div>
-        <div class="day-meals-strip">
-          <div class="meal-chip"><span>早</span>機上套餐</div>
-          <div class="meal-chip"><span>午</span>越式風味餐</div>
-          <div class="meal-chip"><span>晚</span>會安陶先</div>
-        </div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-dragon-bridge.jpg" alt="龍橋" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>龍橋</div><div class="spot-desc">2003年落成，全長666公尺，橫跨漢江東西兩岸。整座橋以金龍為造型，是峴港最具代表性地標，入夜配合燈光更加迷人壯麗。</div><a class="map-btn" href="https://maps.google.com/?q=Dragon+Bridge+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="section-title">景點</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-dragon-bridge.jpg" alt="龍橋" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>龍橋</div><div class="spot-desc">2003年落成，全長666公尺，橫跨漢江東西兩岸。整座橋以金龍為造型，是峴港最具代表性地標，入夜配合燈光更加迷人壯麗。</div><a class="map-btn" href="https://maps.google.com/?q=Dragon+Bridge+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-pink-cathedral.jpg" alt="粉紅大教堂" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>粉紅大教堂</div><div class="spot-desc">建於1923年法國殖民時期，為越南中部最大的西方教堂，外牆以粉紅色為主，塔頂有公雞風向標，又稱「公雞教堂」，屬哥德式建築風格。</div><a class="map-btn" href="https://maps.google.com/?q=Da+Nang+Cathedral+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-love-bridge.jpg" alt="峴港愛情鎖橋" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>峴港愛情鎖橋</div><div class="spot-desc">橫跨漢江的浪漫地標，遊客在此掛上愛情鎖，寄託對愛情的祝願，並可眺望漢江兩岸美景。</div><a class="map-btn" href="https://maps.app.goo.gl/RkSVSWd616aWpCwK6" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-son-tra.jpg" alt="山茶半島" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>山茶半島</div><div class="spot-desc">海拔693米，整個半島約60平方公里，山上觀音像高達67公尺（據稱亞洲第一高）。寺廟匾額與對聯均為正體中文，已規劃為森林保護區，珍稀動物有爪哇猴、長尾猴等。</div><a class="map-btn" href="https://maps.app.goo.gl/rXaPMjufoGUwpWQY7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
-          <div class="section-title">住宿</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="hotel-card">
-          <img loading="lazy" decoding="async" class="hotel-img" src="photo/hotel-hoiana.jpg" alt="會安南岸新世界度假酒店" loading="lazy" onerror="this.style.display='none'">
-          <div class="hotel-name"><i class="fa-solid fa-building"></i>會安南岸新世界度假酒店</div>
-          <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 235-858-6999</strong></div>
-          <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>Hoiana Resort & Golf, Duy Hai, Hoi An</div>
-          <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/W6bd4wyXC8tBSHMR8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>飯店地圖</a>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
-          <div class="section-title">去程航班</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="flight-card">
-          <div>
-            <div class="flight-airline">長榮航空</div>
-            <div class="flight-time">BR-1383</div>
-          </div>
-          <div class="flight-route"><span>桃園</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>峴港</span></div>
-          <div style="text-align:right">
-            <div class="flight-airline" style="color:var(--text)">07:00</div>
-            <div class="flight-time">抵達 08:55</div>
-          </div>
-        </div>
-        <div class="flight-card">
-          <div>
-            <div class="flight-airline">中華航空</div>
-            <div class="flight-time">CI-787</div>
-          </div>
-          <div class="flight-route"><span>桃園</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>峴港</span></div>
-          <div style="text-align:right">
-            <div class="flight-airline" style="color:var(--text)">07:10</div>
-            <div class="flight-time">抵達 09:00</div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
 
-    <!-- ══ DAY 2 ══ -->
-    <div id="screen-day2" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day2-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">DAY 2 · 4月26日（日）</div>
-        <div class="day-main-title">會安古鎮<br>迦南島生態體驗</div>
-        <div class="day-subtitle"><i class="fa-solid fa-landmark" style="color:var(--gold);margin-right:4px"></i>UNESCO 世界文化遺產 × 竹籃船體驗</div>
-        <div class="day-meals-strip">
-          <div class="meal-chip"><span>早</span>飯店享用</div>
-          <div class="meal-chip"><span>午</span>迦南島螃蟹</div>
-          <div class="meal-chip"><span>晚</span>越式香料</div>
-        </div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-pink-cathedral.jpg" alt="粉紅大教堂" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>粉紅大教堂</div><div class="spot-desc">建於1923年法國殖民時期，為越南中部最大的西方教堂，外牆以粉紅色為主，塔頂有公雞風向標，又稱「公雞教堂」，屬哥德式建築風格。</div><a class="map-btn" href="https://maps.google.com/?q=Da+Nang+Cathedral+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="section-title">景點</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-basket-boat.jpg" alt="迦南島原生態體驗" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>迦南島原生態體驗</div><div class="spot-desc">從會安碼頭搭乘船前往對岸迦南島，島上密布水椰林與欖榔樹。體驗搭乘傳統竹桶船穿越原始自然生態，並觀賞漁夫精彩的圓形籃船旋轉特技表演！</div><a class="map-btn" href="https://maps.app.goo.gl/4KFjGGCPHvZKtTLs5" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a><div style="margin-top:10px;padding:8px 12px;background:#FFF8E8;border:1px solid #E8C85A;border-radius:var(--radius-sm);font-size:12px;color:#7A5C10;display:flex;gap:7px;align-items:flex-start"><i class="fa-solid fa-circle-info" style="color:var(--gold-dark);flex-shrink:0;margin-top:1px"></i><span>【註】迦南島竹籃船遊船小費，每人 <strong>20,000 越盾</strong>，敬請自理。</span></div></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-japanese-bridge.jpg" alt="來遠橋" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>來遠橋</div><div class="spot-desc">西元1593年由日本人所建造的木造拱橋，連結日本城與中國城。橋上有屋頂及北側小寺廟，據傳猴年興建、狗年完成，兩側入口分別由猴子與狗守護。</div><a class="map-btn" href="https://maps.app.goo.gl/xzPzktxbfnj9rhRP7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-cantonese-hall.jpg" alt="廣筆會館" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>廣筆會館</div><div class="spot-desc">建於1786年，由廣東商人與肇州同鄉興建，正殿供奉關公，入口兩側繪有桃園結義彩圖，館內有華麗水池與九頭龍像。</div><a class="map-btn" href="https://maps.app.goo.gl/TimbbxMngHVmdg1c7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-tan-ky-house.jpg" alt="進記古宅" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>進記古宅</div><div class="spot-desc">會安最古老也是保留最完整的古宅之一。17世紀融合中日越三大民族文化特色，花費8年建造，至今保持原始風格。</div><a class="map-btn" href="https://maps.google.com/?q=Tan+Ky+Ancient+House+Hoi+An" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-mug-hot"></i></div>
-          <div class="section-title">特別體驗</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-mug-hot" style="color:var(--gold)"></i>越共咖啡 × 咖啡椰奶冰沙</div>
-          <div class="info-card-body">特別安排在地特色咖啡體驗，品嚐越南獨特的滴漏咖啡文化與清涼的咖啡椰奶冰沙。</div>
-        </div>
-        <div class="alert-box">
-          <i class="fa-solid fa-gift alert-icon"></i>
-          <div class="alert-text">晚餐贈送每人<strong>一罐可樂或越南啤酒</strong></div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
-          <div class="section-title">住宿</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-name"><i class="fa-solid fa-building"></i>會安南岸新世界度假酒店</div>
-          <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 235-858-6999</strong></div>
-          <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>Hoiana Resort & Golf, Hoi An</div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
 
-    <!-- ══ DAY 3 ══ -->
-    <div id="screen-day3" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day3-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">DAY 3 · 4月27日（一）</div>
-        <div class="day-main-title">巴拿山纜車<br>黃金橋 × 夢想樂園</div>
-        <div class="day-subtitle"><i class="fa-solid fa-cable-car" style="color:var(--gold);margin-right:4px"></i>金氏世界紀錄纜車 × 雲端黃金橋</div>
-        <div class="day-meals-strip">
-          <div class="meal-chip"><span>早</span>飯店享用</div>
-          <div class="meal-chip"><span>午</span>自理</div>
-          <div class="meal-chip"><span>晚</span>海鮮風味</div>
-        </div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-love-bridge.jpg" alt="峴港愛情鎖橋" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>峴港愛情鎖橋</div><div class="spot-desc">橫跨漢江的浪漫地標，遊客在此掛上愛情鎖，寄託對愛情的祝願，並可眺望漢江兩岸美景。</div><a class="map-btn" href="https://maps.app.goo.gl/RkSVSWd616aWpCwK6" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="section-title">景點</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-cable-car.jpg" alt="巴拿山纜車" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>巴拿山纜車</div><div class="spot-desc">CNN評為「世界最令人印象深刻的10條登山纜車之一」，擁有兩項金氏世界紀錄。路線長達5,801公尺，單程約20分鐘；落差高度約1,290公尺。腳下盡是樹林石澗，身處雲海當中。</div><a class="map-btn" href="https://maps.app.goo.gl/ZhuTXGguw2ddm1A77" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-golden-bridge.jpg" alt="巨手黃金橋" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>巨手黃金橋 Golden Bridge</div><div class="spot-desc">斥資20億美元，全長150公尺。由巨大雙手托起，屹立海拔約1,400公尺的雲霧之上，融合大自然美景與建築美學，更帶有一點禪意，是越南最著名的打卡景點。</div><a class="map-btn" href="https://maps.google.com/?q=Golden+Bridge+Ba+Na+Hills+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-fantasy-park.jpg" alt="夢想樂園" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>夢想樂園 Fantasy Park</div><div class="spot-desc">世界三大室內娛樂公園之一，設施包括：大怒神、音樂快車、騎樓遊戲、侏羅紀公園、鐵軌卡車、搖擺騎馬比賽、室內靶場、小汽車比賽、探險鬼屋、3D電影等。</div><a class="map-btn" href="https://maps.google.com/?q=Fantasy+Park+Ba+Na+Hills" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
-          <div class="section-title">住宿（移師峴港市區）</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="hotel-card">
-          <img loading="lazy" decoding="async" class="hotel-img" src="photo/hotel-crowne.jpg" alt="峴港城中皇冠假日酒店" loading="lazy" onerror="this.style.display='none'">
-          <div class="hotel-name"><i class="fa-solid fa-building"></i>峴港城中皇冠假日酒店</div>
-          <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 236-7307-999</strong></div>
-          <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>17 Quang Trung, Hai Chau Ward, Da Nang</div>
-          <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/94jKE99xeGHU4ZdN7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>飯店地圖</a>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
 
-    <!-- ══ DAY 4 ══ -->
-    <div id="screen-day4" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day4-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">DAY 4 · 4月28日（二）</div>
-        <div class="day-main-title">五行山<br>購物 & 美溪沙灘</div>
-        <div class="day-subtitle"><i class="fa-solid fa-mountain" style="color:var(--gold);margin-right:4px"></i>韓江市場 × VINCOM PLAZA × 烤肉吃到飽</div>
-        <div class="day-meals-strip">
-          <div class="meal-chip"><span>早</span>飯店享用</div>
-          <div class="meal-chip"><span>午</span>Madam Lam</div>
-          <div class="meal-chip"><span>晚</span>韓式烤肉吃到飽</div>
-        </div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-son-tra.jpg" alt="山茶半島" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>山茶半島</div><div class="spot-desc">海拔693米，整個半島約60平方公里，山上觀音像高達67公尺（據稱亞洲第一高）。寺廟匾額與對聯均為正體中文，已規劃為森林保護區，珍稀動物有爪哇猴、長尾猴等。</div><a class="map-btn" href="https://maps.app.goo.gl/rXaPMjufoGUwpWQY7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="section-title">景點</div>
-          <div class="section-line"></div>
-        </div>
+    </div>
+  </div>
 
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-marble-mountains.jpg" alt="五行山" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>五行山（大理石山）</div><div class="spot-desc">根據五行而命名：金木水火土五座山，以水山最大最高也最著名。特別安排搭乘觀景電梯登山步行下山，沿途欣賞越南中部特有秀麗風景。山上有許多寺廟和洞穴，昔日占婆族的聖地。</div><a class="map-btn" href="https://maps.google.com/?q=Marble+Mountains+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
+      <div class="section-title">住宿</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="hotel-card">
+      <img loading="lazy" decoding="async" class="hotel-img" src="photo/hotel-hoiana.jpg" alt="會安南岸新世界度假酒店" loading="lazy" onerror="this.style.display='none'">
+      <div class="hotel-name"><i class="fa-solid fa-building"></i>會安南岸新世界度假酒店</div>
+      <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 235-858-6999</strong></div>
+      <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>Hoiana Resort & Golf, Duy Hai, Hoi An</div>
+      <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/W6bd4wyXC8tBSHMR8" target="_blank"><i class="fa-solid fa-map-location-dot"></i>飯店地圖</a>
+    </div>
+  </div>
 
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-han-market.jpg" alt="韓江市場" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>韓江市場</div><div class="spot-desc">峴港最知名的傳統市場，販售各種在地特色商品、食品及伴手禮，是體驗在地生活的好去處。</div><a class="map-btn" href="https://maps.google.com/?q=Han+Market+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-vincom.jpg" alt="VINCOM PLAZA 購物中心" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>VINCOM PLAZA 購物中心</div><div class="spot-desc">峴港最大的購物中心，設有服飾品牌、家電用品、餐廳、咖啡店等。超市VinMart可購買咖啡、果乾和腰果、泡麵等伴手禮。</div><a class="map-btn" href="https://maps.google.com/?q=Vincom+Plaza+Da+Nang" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
-
-        <div class="spot-card">
-          <div class="spot-card-inner">
-            <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-my-khe.jpg" alt="美溪沙灘" onerror="this.style.display=\'none\'">
-            <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>美溪沙灘</div><div class="spot-desc">在世界六大美麗沙灘之一享受擁抱與親吻大自然的洗禮。沙灘海岸連綿三十多公里，風景美麗，海水清澈見底，是許多中外旅客必遊的拍攝地。</div><a class="map-btn" href="https://maps.google.com/?q=My+Khe+Beach+Da+Nang" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
-          </div>
-        </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
+      <div class="section-title">去程航班</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="flight-card">
+      <div>
+        <div class="flight-airline">長榮航空</div>
+        <div class="flight-time">BR-1383</div>
       </div>
+      <div class="flight-route"><span>桃園</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>峴港</span></div>
+      <div style="text-align:right">
+        <div class="flight-airline" style="color:var(--text)">07:00</div>
+        <div class="flight-time">抵達 08:55</div>
+      </div>
+    </div>
+    <div class="flight-card">
+      <div>
+        <div class="flight-airline">中華航空</div>
+        <div class="flight-time">CI-787</div>
+      </div>
+      <div class="flight-route"><span>桃園</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>峴港</span></div>
+      <div style="text-align:right">
+        <div class="flight-airline" style="color:var(--text)">07:10</div>
+        <div class="flight-time">抵達 09:00</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
 
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-utensils"></i></div>
-          <div class="section-title">特別餐飲</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-star" style="color:var(--gold)"></i>午餐：米其林推薦 Madam Lam</div>
-          <div class="info-card-body">享用米其林指南推薦的越南料理，體驗在地高品質餐廳。</div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-fire" style="color:var(--gold)"></i>晚餐：韓式烤肉吃到飽</div>
-          <div class="info-card-body">豐盛的韓式烤肉吃到飽（不含飲料），盡情享用各式烤肉與海鮮，大快朵頤！</div>
-        </div>
-      </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
-          <div class="section-title">住宿</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-name"><i class="fa-solid fa-building"></i>峴港城中皇冠假日酒店</div>
-          <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 236-7307-999</strong></div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
+<!-- ══ DAY 2 ══ -->
+<div id="screen-day2" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day2-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="weather-widget wx-left" id="weather-day2"><div class="weather-box"><div class="weather-loading">⏳</div></div></div>
+    <div class="day-num">DAY 2 · 4月26日（日）</div>
+    <div class="day-main-title">會安古鎮<br>迦南島生態體驗</div>
+    <div class="day-subtitle"><i class="fa-solid fa-landmark" style="color:var(--gold);margin-right:4px"></i>UNESCO 世界文化遺產 × 竹籃船體驗</div>
+    <div class="day-meals-strip">
+      <div class="meal-chip"><span>早</span>飯店享用</div>
+      <div class="meal-chip"><span>午</span>迦南島螃蟹</div>
+      <div class="meal-chip"><span>晚</span>越式香料</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="section-title">景點</div>
+      <div class="section-line"></div>
     </div>
 
-    <!-- ══ DAY 5 ══ -->
-    <div id="screen-day5" class="screen">
-      <div class="day-hero" style="background: linear-gradient(135deg,#2C2416,#1A1410);">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day5-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">DAY 5 · 4月29日（三）</div>
-        <div class="day-main-title">自由時光<br>返程桃園</div>
-        <div class="day-subtitle"><i class="fa-solid fa-plane-departure" style="color:var(--gold);margin-right:4px"></i>峴港機場 → 桃園機場</div>
-        <div class="day-meals-strip">
-          <div class="meal-chip"><span>早</span>飯店享用</div>
-          <div class="meal-chip"><span>午</span>機上套餐</div>
-          <div class="meal-chip"><span>晚</span>溫暖的家</div>
-        </div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-basket-boat.jpg" alt="迦南島原生態體驗" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>迦南島原生態體驗</div><div class="spot-desc">從會安碼頭搭乘船前往對岸迦南島，島上密布水椰林與欖榔樹。體驗搭乘傳統竹桶船穿越原始自然生態，並觀賞漁夫精彩的圓形籃船旋轉特技表演！</div><a class="map-btn" href="https://maps.app.goo.gl/4KFjGGCPHvZKtTLs5" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a><div style="margin-top:10px;padding:8px 12px;background:#FFF8E8;border:1px solid #E8C85A;border-radius:var(--radius-sm);font-size:12px;color:#7A5C10;display:flex;gap:7px;align-items:flex-start"><i class="fa-solid fa-circle-info" style="color:var(--gold-dark);flex-shrink:0;margin-top:1px"></i><span>【註】迦南島竹籃船遊船小費，每人 <strong>20,000 越盾</strong>，敬請自理。</span></div></div>
       </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-sun"></i></div>
-          <div class="section-title">最後的悠閒時光</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-body" style="font-size:14px;line-height:1.8;color:var(--text)">
-            今天享受一個不用太早起床的慵懶假期，享用完早餐後可以使用飯店內游泳池等各類設施，亦可拿一本書好好享受這悠閒的時光。<br><br>
-            享用飯店美味的早餐後，專車前往峴港機場，最後帶著依依不捨的心情，直飛返回溫暖的家，結束難忘的「越南・峴港」5日之旅。
-          </div>
-        </div>
-      </div>
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
-          <div class="section-title">回程航班</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="flight-card">
-          <div><div class="flight-airline">中華航空</div><div class="flight-time">CI-788</div></div>
-          <div class="flight-route"><span>峴港</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>桃園</span></div>
-          <div style="text-align:right"><div class="flight-airline" style="color:var(--text)">10:00</div><div class="flight-time">抵達 13:50</div></div>
-        </div>
-        <div class="flight-card">
-          <div><div class="flight-airline">長榮航空</div><div class="flight-time">BR-384</div></div>
-          <div class="flight-route"><span>峴港</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>桃園</span></div>
-          <div style="text-align:right"><div class="flight-airline" style="color:var(--text)">12:55</div><div class="flight-time">抵達 16:45</div></div>
-        </div>
-        <div class="alert-box">
-          <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
-          <div class="alert-text">請於<strong>航班起飛前至少 2 小時</strong>抵達峴港機場，機場商店街有紀念品可購買。</div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
 
-    <!-- ══ OPTIONAL ══ -->
-    <div id="screen-optional" class="screen">
-      <div class="day-hero" style="background: linear-gradient(135deg,#2C1F08,#1A1410);">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/optional-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num"><i class="fa-solid fa-tag" style="margin-right:5px"></i>自費行程</div>
-        <div class="day-main-title">可選自費項目</div>
-        <div class="day-subtitle">以下費用均不含在團費中，請自行決定是否參加</div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-japanese-bridge.jpg" alt="來遠橋" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>來遠橋</div><div class="spot-desc">西元1593年由日本人所建造的木造拱橋，連結日本城與中國城。橋上有屋頂及北側小寺廟，據傳猴年興建、狗年完成，兩側入口分別由猴子與狗守護。</div><a class="map-btn" href="https://maps.app.goo.gl/xzPzktxbfnj9rhRP7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-
-      <!-- 旅行社自費推薦 -->
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-list"></i></div>
-          <div class="section-title">旅行社推薦自費</div>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="optional-card">
-          <div class="optional-header">
-            <div class="optional-num">1</div>
-            <div class="optional-name">夜遊韓江</div>
-          </div>
-          <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 600 ／人</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.7">夜晚搭乘遊覽船沿韓江欣賞峴港璀璨夜景，龍橋燈光倒映水面，景色迷人，適合全家大小。</div>
-
-        </div>
-
-        <div class="optional-card">
-          <div class="optional-header">
-            <div class="optional-num">2</div>
-            <div class="optional-name">越式洗頭 + 越式按摩</div>
-          </div>
-          <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 1,100 ／人</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.7">體驗越南傳統洗頭護髮服務搭配全身按摩，消除旅途疲勞，是旅遊途中最受歡迎的自費項目。</div>
-        </div>
-
-        <div class="optional-card">
-          <div class="optional-header">
-            <div class="optional-num">3</div>
-            <div class="optional-name">會安記憶秀</div>
-          </div>
-          <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 1,100 ／人</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.7">越南最大戶外實景演出，以會安古城為舞台，融合傳統舞蹈、雜技與燈光音效，每晚約70分鐘，震撼人心。</div>
-          <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/TDg4GCr1JBUMcWnm9" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a>
-        </div>
-      </div>
-
-      <!-- 特別說明 -->
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
-          <div class="section-title">特別說明</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="notice-card">
-          <div class="notice-card-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--gold)"></i>說明一</div>
-          <div class="notice-card-body">推薦自費活動價目會因行程路線、時間、天候、人數及各項因素而有部分調整，<strong>實際價格請洽詢當團領隊</strong>，敬請知悉！</div>
-        </div>
-        <div class="notice-card">
-          <div class="notice-card-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--gold)"></i>說明二</div>
-          <div class="notice-card-body">上述自費價格為訂表時之定價，如有變動則隨時調整，敬請見諒。</div>
-        </div>
-        <div class="alert-box" style="margin-top:4px">
-          <i class="fa-solid fa-phone alert-icon"></i>
-          <div class="alert-text">如需報名自費項目，請洽詢隨行領隊或東南旅遊服務窗口<br><strong>田逸婕 小姐</strong>&nbsp;&nbsp;<a href="tel:0912523947" style="color:var(--gold-dark);font-weight:700">0912-523-947</a></div>
-        </div>
-      </div>
-
-      <div class="bottom-spacer"></div>
     </div>
 
-
-    <!-- ══ CONTACT ══ -->
-    <div id="screen-contact" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/contact-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">緊急聯絡</div>
-        <div class="day-main-title">車隊領隊<br>服務窗口</div>
-        <div class="day-subtitle"><i class="fa-solid fa-headset" style="color:var(--gold);margin-right:4px"></i>旅途中有任何問題，請直接聯繫</div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-cantonese-hall.jpg" alt="廣筆會館" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>廣筆會館</div><div class="spot-desc">建於1786年，由廣東商人與肇州同鄉興建，正殿供奉關公，入口兩側繪有桃園結義彩圖，館內有華麗水池與九頭龍像。</div><a class="map-btn" href="https://maps.app.goo.gl/TimbbxMngHVmdg1c7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-bus"></i></div>
-          <div class="section-title">車隊領隊</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="contact-table">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-user"></i>A車 林旭恆 先生</div>
-            <div class="contact-value"><a href="tel:0989320307">0989-320-307</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-user"></i>B車 廖小萩 小姐</div>
-            <div class="contact-value"><a href="tel:0935983414">0935-983-414</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-user"></i>C車 劉姿吟 小姐</div>
-            <div class="contact-value"><a href="tel:0955543681">0955-543-681</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-user"></i>D車 黃蒨萱 小姐</div>
-            <div class="contact-value"><a href="tel:0987319478">0987-319-478</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-building-user"></i></div>
-          <div class="section-title">東南旅遊服務窗口</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="contact-table">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-user-tie"></i>田逸婕 小姐</div>
-            <div class="contact-value"><a href="tel:0912523947">0912-523-947</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
-          <div class="section-title">機場送機人員</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="contact-table">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-plane"></i>長榮（代表號）</div>
-            <div class="contact-value"><a href="tel:0988236335">0988-236-335</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-plane"></i>中華（代表號）</div>
-            <div class="contact-value"><a href="tel:0933920300">0933-920-300</a></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-map-pin"></i></div>
-          <div class="section-title">出發集合資訊</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="contact-table">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-clock"></i>接駁車發車</div>
-            <div class="contact-value" style="color:var(--gold);font-weight:700">4/25 凌晨 3:45</div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-location-dot"></i>集合地點</div>
-            <div class="contact-value" style="font-size:12px">新北市新店區<br>民權路88號（第一銀行／門口）</div>
-          </div>
-        </div>
-        <div class="contact-table" style="margin-top:8px">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-plane-departure"></i>長榮 機場集合</div>
-            <div class="contact-value" style="font-size:12px">第二航廈 長榮20號<br>凌晨 4:45</div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-plane-departure"></i>中華 機場集合</div>
-            <div class="contact-value" style="font-size:12px">第一航廈 中華11號<br>凌晨 4:45</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
-          <div class="section-title">飯店聯絡</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="contact-table">
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-hotel"></i>會安南岸新世界</div>
-            <div class="contact-value"><a href="tel:+842358586999">+84 235-858-6999</a></div>
-          </div>
-          <div class="contact-row">
-            <div class="contact-label"><i class="fa-solid fa-hotel"></i>峴港城中皇冠假日</div>
-            <div class="contact-value"><a href="tel:+842367307999">+84 236-7307-999</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
 
-    <!-- ══ NOTES ══ -->
-    <div id="screen-notes" class="screen">
-      <div class="day-hero">
-        <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/notes-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
-        <div class="day-num">行前準備</div>
-        <div class="day-main-title">重要提醒<br>旅遊貼心小叮嚀</div>
-        <div class="day-subtitle"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:4px"></i>出發前請務必確認以下事項</div>
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-tan-ky-house.jpg" alt="進記古宅" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>進記古宅</div><div class="spot-desc">會安最古老也是保留最完整的古宅之一。17世紀融合中日越三大民族文化特色，花費8年建造，至今保持原始風格。</div><a class="map-btn" href="https://maps.google.com/?q=Tan+Ky+Ancient+House+Hoi+An" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
       </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-passport"></i></div>
-          <div class="section-title">護照 & 證件</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="alert-box">
-          <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
-          <div class="alert-text"><strong>護照效期要求：</strong><br>請攜帶效期至 <strong>2026年10月29日之後</strong> 的護照正本（從回國之日起算需有六個月以上效期）。</div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-cloud-sun"></i></div>
-          <div class="section-title">氣候 & 衣著</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-cloud-sun" style="color:var(--gold)"></i>越南4月氣溫</div>
-          <div class="info-card-body">約 <strong>24～34°C</strong>，以夏季服裝為主，建議穿著容易穿脫的衣服及鞋子。</div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-bag-shopping" style="color:var(--gold)"></i>建議攜帶物品</div>
-          <div class="info-card-body">牙膏、牙刷、拖鞋、刮鬍刀、帽子、護膚乳液、太陽眼鏡、個人常用藥品（防曬乳、腸胃藥、感冒藥等）</div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-clock"></i></div>
-          <div class="section-title">時差 & 電壓</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-clock" style="color:var(--gold)"></i>時差</div>
-          <div class="info-card-body">越南比台灣<strong>慢1小時</strong><br>台灣 中午12點 = 越南 上午11點</div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-bolt" style="color:var(--gold)"></i>電壓</div>
-          <div class="info-card-body">越南電壓為 <strong>220V</strong>，台灣為110V。<br>建議攜帶轉換插頭，以免損壞電器。</div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-coins"></i></div>
-          <div class="section-title">貨幣 & 匯率</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-money-bill-wave" style="color:var(--gold)"></i>越南盾（DONG）</div>
-          <div class="info-card-body">
-            1 美元 ≈ 約 20,000 盾<br>
-            1 台幣 ≈ 約 750～770 盾<br>
-            <span style="color:var(--text3);font-size:12px">※ 以當日牌告匯率為準</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
-          <div class="section-title">行李限制</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-suitcase" style="color:var(--gold)"></i>行李規定</div>
-          <div class="info-card-body">
-            托運行李：可免費托運 <strong>1件，重量上限 23 公斤</strong><br>
-            手提行李：<strong>1件，重量上限 7 公斤</strong>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-          <div class="section-title">小費參考</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-hand-holding-dollar" style="color:var(--gold)"></i>越南小費文化</div>
-          <div class="info-card-body">
-            按摩小費：約 <strong>20,000～50,000 盾／次</strong>（約 NT$27～67）<br>
-            迦南島竹船小費：約 <strong>20,000～30,000 盾／人</strong>（約 NT$27～40）<br>
-            飯店房務：約 <strong>10,000～20,000 盾／天</strong>（約 NT$14～27）<br>
-            <span style="color:var(--text3);font-size:12px">※ 小費非強制，視服務品質自行斟酌</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <div class="section-title">台灣海關規定</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-money-bills" style="color:var(--gold)"></i>入出境攜帶現金限額</div>
-          <div class="info-card-body">
-            外幣現金出境：不可超過 <strong>美金 1萬元</strong>（旅行支票不限）<br>
-            新台幣出境：不可超過 <strong>新台幣 10萬元</strong>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-box-open" style="color:var(--gold)"></i>入境台灣免稅規定</div>
-          <div class="info-card-body">
-            酒類：<strong>1公升</strong>以內免稅<br>
-            菸類：捲菸 <strong>200支</strong>、雪茄 <strong>25支</strong>或菸絲 <strong>1磅</strong>擇一<br>
-            其他商品：完稅價格合計不超過 <strong>新台幣 2萬元</strong>免稅<br>
-            <span style="color:var(--text3);font-size:12px">※ 超過免稅限額須主動向海關申報</span>
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-ban" style="color:var(--gold)"></i>越南出境禁止攜帶</div>
-          <div class="info-card-body">
-            越南盾現金不得超過 <strong>1,500萬盾</strong><br>
-            外幣現金超過 <strong>USD 5,000</strong> 須申報<br>
-            珍稀動植物、未申報文物古董禁止出境<br>
-            <span style="color:var(--text3);font-size:12px">※ 購買仿冒品亦屬違法，請勿攜帶</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-section">
-        <div class="section-header">
-          <div class="section-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="section-title">撥打電話回台灣</div>
-          <div class="section-line"></div>
-        </div>
-        <div class="info-card">
-          <div class="info-card-title"><i class="fa-solid fa-mobile-screen" style="color:var(--gold)"></i>撥打方式</div>
-          <div class="info-card-body">
-            市話：<strong>00 + 886 + 區域碼 + 電話號碼</strong><br>
-            手機：<strong>00 + 886 + (去0) 手機號碼</strong><br>
-            例如：0912-345-678 → 00-886-912-345-678
-          </div>
-        </div>
-      </div>
-      <div class="bottom-spacer"></div>
     </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-mug-hot"></i></div>
+      <div class="section-title">特別體驗</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-mug-hot" style="color:var(--gold)"></i>越共咖啡 × 咖啡椰奶冰沙</div>
+      <div class="info-card-body">特別安排在地特色咖啡體驗，品嚐越南獨特的滴漏咖啡文化與清涼的咖啡椰奶冰沙。</div>
+    </div>
+    <div class="alert-box">
+      <i class="fa-solid fa-gift alert-icon"></i>
+      <div class="alert-text">晚餐贈送每人<strong>一罐可樂或越南啤酒</strong></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
+      <div class="section-title">住宿</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-name"><i class="fa-solid fa-building"></i>會安南岸新世界度假酒店</div>
+      <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 235-858-6999</strong></div>
+      <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>Hoiana Resort & Golf, Hoi An</div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- ══ DAY 3 ══ -->
+<div id="screen-day3" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day3-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="weather-widget wx-bottom" id="weather-day3"><div class="weather-box"><div class="weather-loading">⏳</div></div></div>
+    <div class="day-num">DAY 3 · 4月27日（一）</div>
+    <div class="day-main-title">巴拿山纜車<br>黃金橋 × 夢想樂園</div>
+    <div class="day-subtitle"><i class="fa-solid fa-cable-car" style="color:var(--gold);margin-right:4px"></i>金氏世界紀錄纜車 × 雲端黃金橋</div>
+    <div class="day-meals-strip">
+      <div class="meal-chip"><span>早</span>飯店享用</div>
+      <div class="meal-chip"><span>午</span>自理</div>
+      <div class="meal-chip"><span>晚</span>海鮮風味</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="section-title">景點</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-cable-car.jpg" alt="巴拿山纜車" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>巴拿山纜車</div><div class="spot-desc">CNN評為「世界最令人印象深刻的10條登山纜車之一」，擁有兩項金氏世界紀錄。路線長達5,801公尺，單程約20分鐘；落差高度約1,290公尺。腳下盡是樹林石澗，身處雲海當中。</div><a class="map-btn" href="https://maps.app.goo.gl/ZhuTXGguw2ddm1A77" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-golden-bridge.jpg" alt="巨手黃金橋" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>巨手黃金橋 Golden Bridge</div><div class="spot-desc">斥資20億美元，全長150公尺。由巨大雙手托起，屹立海拔約1,400公尺的雲霧之上，融合大自然美景與建築美學，更帶有一點禪意，是越南最著名的打卡景點。</div><a class="map-btn" href="https://maps.google.com/?q=Golden+Bridge+Ba+Na+Hills+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-fantasy-park.jpg" alt="夢想樂園" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>夢想樂園 Fantasy Park</div><div class="spot-desc">世界三大室內娛樂公園之一，設施包括：大怒神、音樂快車、騎樓遊戲、侏羅紀公園、鐵軌卡車、搖擺騎馬比賽、室內靶場、小汽車比賽、探險鬼屋、3D電影等。</div><a class="map-btn" href="https://maps.google.com/?q=Fantasy+Park+Ba+Na+Hills" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
+      <div class="section-title">住宿（移師峴港市區）</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="hotel-card">
+      <img loading="lazy" decoding="async" class="hotel-img" src="photo/hotel-crowne.jpg" alt="峴港城中皇冠假日酒店" loading="lazy" onerror="this.style.display='none'">
+      <div class="hotel-name"><i class="fa-solid fa-building"></i>峴港城中皇冠假日酒店</div>
+      <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 236-7307-999</strong></div>
+      <div class="hotel-detail"><i class="fa-solid fa-location-pin"></i>17 Quang Trung, Hai Chau Ward, Da Nang</div>
+      <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/94jKE99xeGHU4ZdN7" target="_blank"><i class="fa-solid fa-map-location-dot"></i>飯店地圖</a>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- ══ DAY 4 ══ -->
+<div id="screen-day4" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day4-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="weather-widget wx-bottom" id="weather-day4"><div class="weather-box"><div class="weather-loading">⏳</div></div></div>
+    <div class="day-num">DAY 4 · 4月28日（二）</div>
+    <div class="day-main-title">五行山<br>購物 & 美溪沙灘</div>
+    <div class="day-subtitle"><i class="fa-solid fa-mountain" style="color:var(--gold);margin-right:4px"></i>韓江市場 × VINCOM PLAZA × 烤肉吃到飽</div>
+    <div class="day-meals-strip">
+      <div class="meal-chip"><span>早</span>飯店享用</div>
+      <div class="meal-chip"><span>午</span>Madam Lam</div>
+      <div class="meal-chip"><span>晚</span>韓式烤肉吃到飽</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="section-title">景點</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-marble-mountains.jpg" alt="五行山" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>五行山（大理石山）</div><div class="spot-desc">根據五行而命名：金木水火土五座山，以水山最大最高也最著名。特別安排搭乘觀景電梯登山步行下山，沿途欣賞越南中部特有秀麗風景。山上有許多寺廟和洞穴，昔日占婆族的聖地。</div><a class="map-btn" href="https://maps.google.com/?q=Marble+Mountains+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-han-market.jpg" alt="韓江市場" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>韓江市場</div><div class="spot-desc">峴港最知名的傳統市場，販售各種在地特色商品、食品及伴手禮，是體驗在地生活的好去處。</div><a class="map-btn" href="https://maps.google.com/?q=Han+Market+Da+Nang+Vietnam" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-vincom.jpg" alt="VINCOM PLAZA 購物中心" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>VINCOM PLAZA 購物中心</div><div class="spot-desc">峴港最大的購物中心，設有服飾品牌、家電用品、餐廳、咖啡店等。超市VinMart可購買咖啡、果乾和腰果、泡麵等伴手禮。</div><a class="map-btn" href="https://maps.google.com/?q=Vincom+Plaza+Da+Nang" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-card-inner">
+        <img loading="lazy" decoding="async" class="spot-thumb" src="photo/spot-my-khe.jpg" alt="美溪沙灘" onerror="this.style.display=\'none\'">
+        <div class="spot-card-text"><div class="spot-name"><i class="fa-solid fa-location-dot"></i>美溪沙灘</div><div class="spot-desc">在世界六大美麗沙灘之一享受擁抱與親吻大自然的洗禮。沙灘海岸連綿三十多公里，風景美麗，海水清澈見底，是許多中外旅客必遊的拍攝地。</div><a class="map-btn" href="https://maps.google.com/?q=My+Khe+Beach+Da+Nang" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-utensils"></i></div>
+      <div class="section-title">特別餐飲</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-star" style="color:var(--gold)"></i>午餐：米其林推薦 Madam Lam</div>
+      <div class="info-card-body">享用米其林指南推薦的越南料理，體驗在地高品質餐廳。</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-fire" style="color:var(--gold)"></i>晚餐：韓式烤肉吃到飽</div>
+      <div class="info-card-body">豐盛的韓式烤肉吃到飽（不含飲料），盡情享用各式烤肉與海鮮，大快朵頤！</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
+      <div class="section-title">住宿</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="hotel-card">
+      <div class="hotel-name"><i class="fa-solid fa-building"></i>峴港城中皇冠假日酒店</div>
+      <div class="hotel-detail"><i class="fa-solid fa-phone"></i><strong>+84 236-7307-999</strong></div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+
+<!-- ══ TOOLS ══ -->
+<div id="screen-tools" class="screen">
+
+  <!-- Hero -->
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day1-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="day-num">工具</div>
+    <div class="day-main-title">越南盾<br>換算機</div>
+    <div class="day-subtitle"><i class="fa-solid fa-coins" style="color:var(--gold);margin-right:4px"></i>台幣 / 美元 ↔ 越南盾</div>
+  </div>
+
+  <!-- 換算機 -->
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-calculator"></i></div>
+      <div class="section-title">換算機</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-sliders" style="color:var(--gold)"></i>匯率設定</div>
+      <div class="info-card-body">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:13px;color:var(--text2);white-space:nowrap">🇹🇼 1台幣 =</span>
+          <input class="rate-input" type="number" id="rateInput" value="800" style="width:70px;height:34px;padding:0 8px;font-size:14px;border:1px solid #EDE3CC;border-radius:6px;background:#FAFAF7;color:var(--text);outline:none;font-family:inherit;text-align:center;font-weight:600">
+          <span style="font-size:13px;color:var(--text2)">盾</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:13px;color:var(--text2);white-space:nowrap">🇺🇸 1美元 =</span>
+          <input class="rate-input" type="number" id="rateUsdInput" value="25000" style="width:70px;height:34px;padding:0 8px;font-size:14px;border:1px solid #EDE3CC;border-radius:6px;background:#FAFAF7;color:var(--text);outline:none;font-family:inherit;text-align:center;font-weight:600">
+          <span style="font-size:13px;color:var(--text2)">盾</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-arrow-right-arrow-left" style="color:var(--gold)"></i>金額換算</div>
+      <div class="info-card-body">
+        <div style="display:flex;gap:6px;margin-bottom:10px">
+          <button class="currency-tab active" id="tab-twd" onclick="switchCurrency('twd')" style="flex:1;height:34px;border:1px solid #EDE3CC;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#C4961A;color:#1A1410">🇹🇼 台幣→盾</button>
+          <button class="currency-tab" id="tab-usd" onclick="switchCurrency('usd')" style="flex:1;height:34px;border:1px solid #EDE3CC;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#FAFAF7;color:var(--text2)">🇺🇸 美元→盾</button>
+          <button class="currency-tab" id="tab-vnd" onclick="switchCurrency('vnd')" style="flex:1;height:34px;border:1px solid #EDE3CC;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#FAFAF7;color:var(--text2)">🇻🇳 盾→台幣</button>
+        </div>
+        <input style="width:100%;height:44px;padding:0 14px;font-size:16px;border:1px solid #EDE3CC;border-radius:8px;background:#FAFAF7;color:var(--text);outline:none;font-family:inherit;box-sizing:border-box" type="number" id="currencyInput" placeholder="輸入金額..." oninput="calcCurrency()">
+        <div id="currencyResult" style="display:none;margin-top:10px;padding:12px 14px;background:#FFF8E8;border:1px solid #E8C85A;border-radius:8px;font-size:14px;color:var(--text)"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- K單位說明 -->
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="section-title">越南「K」怎麼算？</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-body">
+        <div style="font-size:13px;color:var(--text2);margin-bottom:10px">越南人習慣用 <strong style="color:var(--gold-dark)">K</strong> 表示千盾，例如 5K = 5,000盾</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px" id="k-table">
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">5K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k5">6</span></div>
+          </div>
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">10K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k10">13</span></div>
+          </div>
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">50K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k50">63</span></div>
+          </div>
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">100K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k100">125</span></div>
+          </div>
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">200K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k200">250</span></div>
+          </div>
+          <div style="background:#FFF8E8;border:1px solid #E8C85A;border-radius:6px;padding:8px;text-align:center">
+            <div style="font-size:13px;font-weight:700;color:var(--gold-dark)">500K</div>
+            <div style="font-size:11px;color:var(--text2)">≈ NT$<span id="k500">625</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- ══ DAY 5 ══ -->
+<div id="screen-day5" class="screen">
+  <div class="day-hero" style="background: linear-gradient(135deg,#2C2416,#1A1410);">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/day5-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="weather-widget wx-left" id="weather-day5"><div class="weather-box"><div class="weather-loading">⏳</div></div></div>
+    <div class="day-num">DAY 5 · 4月29日（三）</div>
+    <div class="day-main-title">自由時光<br>返程桃園</div>
+    <div class="day-subtitle"><i class="fa-solid fa-plane-departure" style="color:var(--gold);margin-right:4px"></i>峴港機場 → 桃園機場</div>
+    <div class="day-meals-strip">
+      <div class="meal-chip"><span>早</span>飯店享用</div>
+      <div class="meal-chip"><span>午</span>機上套餐</div>
+      <div class="meal-chip"><span>晚</span>溫暖的家</div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-sun"></i></div>
+      <div class="section-title">最後的悠閒時光</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-body" style="font-size:14px;line-height:1.8;color:var(--text)">
+        今天享受一個不用太早起床的慵懶假期，享用完早餐後可以使用飯店內游泳池等各類設施，亦可拿一本書好好享受這悠閒的時光。<br><br>
+        享用飯店美味的早餐後，專車前往峴港機場，最後帶著依依不捨的心情，直飛返回溫暖的家，結束難忘的「越南・峴港」5日之旅。
+      </div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
+      <div class="section-title">回程航班</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="flight-card">
+      <div><div class="flight-airline">中華航空</div><div class="flight-time">CI-788</div></div>
+      <div class="flight-route"><span>峴港</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>桃園</span></div>
+      <div style="text-align:right"><div class="flight-airline" style="color:var(--text)">10:00</div><div class="flight-time">抵達 13:50</div></div>
+    </div>
+    <div class="flight-card">
+      <div><div class="flight-airline">長榮航空</div><div class="flight-time">BR-384</div></div>
+      <div class="flight-route"><span>峴港</span><i class="fa-solid fa-arrow-right flight-arrow"></i><span>桃園</span></div>
+      <div style="text-align:right"><div class="flight-airline" style="color:var(--text)">12:55</div><div class="flight-time">抵達 16:45</div></div>
+    </div>
+    <div class="alert-box">
+      <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+      <div class="alert-text">請於<strong>航班起飛前至少 2 小時</strong>抵達峴港機場，機場商店街有紀念品可購買。</div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- ══ OPTIONAL ══ -->
+<div id="screen-optional" class="screen">
+  <div class="day-hero" style="background: linear-gradient(135deg,#2C1F08,#1A1410);">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/optional-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="day-num"><i class="fa-solid fa-tag" style="margin-right:5px"></i>自費行程</div>
+    <div class="day-main-title">可選自費項目</div>
+    <div class="day-subtitle">以下費用均不含在團費中，請自行決定是否參加</div>
+  </div>
+
+  <!-- 旅行社自費推薦 -->
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-list"></i></div>
+      <div class="section-title">旅行社推薦自費</div>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="optional-card">
+      <div class="optional-header">
+        <div class="optional-num">1</div>
+        <div class="optional-name">夜遊韓江</div>
+      </div>
+      <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 600 ／人</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.7">夜晚搭乘遊覽船沿韓江欣賞峴港璀璨夜景，龍橋燈光倒映水面，景色迷人，適合全家大小。</div>
+
+    </div>
+
+    <div class="optional-card">
+      <div class="optional-header">
+        <div class="optional-num">2</div>
+        <div class="optional-name">越式洗頭 + 越式按摩</div>
+      </div>
+      <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 1,100 ／人</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.7">體驗越南傳統洗頭護髮服務搭配全身按摩，消除旅途疲勞，是旅遊途中最受歡迎的自費項目。</div>
+    </div>
+
+    <div class="optional-card">
+      <div class="optional-header">
+        <div class="optional-num">3</div>
+        <div class="optional-name">會安記憶秀</div>
+      </div>
+      <div class="price-tag" style="margin-bottom:10px"><i class="fa-solid fa-dollar-sign"></i>NT$ 1,100 ／人</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.7">越南最大戶外實景演出，以會安古城為舞台，融合傳統舞蹈、雜技與燈光音效，每晚約70分鐘，震撼人心。</div>
+      <a class="map-btn" style="margin-top:10px" href="https://maps.app.goo.gl/TDg4GCr1JBUMcWnm9" target="_blank"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a>
+    </div>
+  </div>
+
+  <!-- 特別說明 -->
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+      <div class="section-title">特別說明</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="notice-card">
+      <div class="notice-card-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--gold)"></i>說明一</div>
+      <div class="notice-card-body">推薦自費活動價目會因行程路線、時間、天候、人數及各項因素而有部分調整，<strong>實際價格請洽詢當團領隊</strong>，敬請知悉！</div>
+    </div>
+    <div class="notice-card">
+      <div class="notice-card-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--gold)"></i>說明二</div>
+      <div class="notice-card-body">上述自費價格為訂表時之定價，如有變動則隨時調整，敬請見諒。</div>
+    </div>
+    <div class="alert-box" style="margin-top:4px">
+      <i class="fa-solid fa-phone alert-icon"></i>
+      <div class="alert-text">如需報名自費項目，請洽詢隨行領隊或東南旅遊服務窗口<br><strong>田逸婕 小姐</strong>&nbsp;&nbsp;<a href="tel:0912523947" style="color:var(--gold-dark);font-weight:700">0912-523-947</a></div>
+    </div>
+  </div>
+
+  <div class="bottom-spacer"></div>
+</div>
+
+
+<!-- ══ CONTACT ══ -->
+<div id="screen-contact" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/contact-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="day-num">緊急聯絡</div>
+    <div class="day-main-title">車隊領隊<br>服務窗口</div>
+    <div class="day-subtitle"><i class="fa-solid fa-headset" style="color:var(--gold);margin-right:4px"></i>旅途中有任何問題，請直接聯繫</div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-bus"></i></div>
+      <div class="section-title">車隊領隊</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-table">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-user"></i>A車 林旭恆 先生</div>
+        <div class="contact-value"><a href="tel:0989320307">0989-320-307</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-user"></i>B車 廖小萩 小姐</div>
+        <div class="contact-value"><a href="tel:0935983414">0935-983-414</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-user"></i>C車 劉姿吟 小姐</div>
+        <div class="contact-value"><a href="tel:0955543681">0955-543-681</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-user"></i>D車 黃蒨萱 小姐</div>
+        <div class="contact-value"><a href="tel:0987319478">0987-319-478</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-building-user"></i></div>
+      <div class="section-title">東南旅遊服務窗口</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-table">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-user-tie"></i>田逸婕 小姐</div>
+        <div class="contact-value"><a href="tel:0912523947">0912-523-947</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-plane"></i></div>
+      <div class="section-title">機場送機人員</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-table">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-plane"></i>長榮（代表號）</div>
+        <div class="contact-value"><a href="tel:0988236335">0988-236-335</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-plane"></i>中華（代表號）</div>
+        <div class="contact-value"><a href="tel:0933920300">0933-920-300</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-map-pin"></i></div>
+      <div class="section-title">出發集合資訊</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-table">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-clock"></i>接駁車發車</div>
+        <div class="contact-value" style="color:var(--gold);font-weight:700">4/25 凌晨 3:45</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-location-dot"></i>集合地點</div>
+        <div class="contact-value" style="font-size:12px">新北市新店區<br>民權路88號（第一銀行／門口）</div>
+      </div>
+    </div>
+    <div class="contact-table" style="margin-top:8px">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-plane-departure"></i>長榮 機場集合</div>
+        <div class="contact-value" style="font-size:12px">第二航廈 長榮20號<br>凌晨 4:45</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-plane-departure"></i>中華 機場集合</div>
+        <div class="contact-value" style="font-size:12px">第一航廈 中華11號<br>凌晨 4:45</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hotel"></i></div>
+      <div class="section-title">飯店聯絡</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-table">
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-hotel"></i>會安南岸新世界</div>
+        <div class="contact-value"><a href="tel:+842358586999">+84 235-858-6999</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-label"><i class="fa-solid fa-hotel"></i>峴港城中皇冠假日</div>
+        <div class="contact-value"><a href="tel:+842367307999">+84 236-7307-999</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- ══ NOTES ══ -->
+<div id="screen-notes" class="screen">
+  <div class="day-hero">
+    <div class="hero-circle-img"><img loading="lazy" decoding="async" src="photo/notes-hero.jpg" alt="" onerror="this.parentElement.style.display='none'"></div>
+    <div class="day-num">行前準備</div>
+    <div class="day-main-title">重要提醒<br>旅遊貼心小叮嚀</div>
+    <div class="day-subtitle"><i class="fa-solid fa-circle-info" style="color:var(--gold);margin-right:4px"></i>出發前請務必確認以下事項</div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-passport"></i></div>
+      <div class="section-title">護照 & 證件</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="alert-box">
+      <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+      <div class="alert-text"><strong>護照效期要求：</strong><br>請攜帶效期至 <strong>2026年10月29日之後</strong> 的護照正本（從回國之日起算需有六個月以上效期）。</div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+      <div class="section-title">氣候 & 衣著</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-cloud-sun" style="color:var(--gold)"></i>越南4月氣溫</div>
+      <div class="info-card-body">約 <strong>24～34°C</strong>，以夏季服裝為主，建議穿著容易穿脫的衣服及鞋子。</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-bag-shopping" style="color:var(--gold)"></i>建議攜帶物品</div>
+      <div class="info-card-body">牙膏、牙刷、拖鞋、刮鬍刀、帽子、護膚乳液、太陽眼鏡、個人常用藥品（防曬乳、腸胃藥、感冒藥等）</div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-clock"></i></div>
+      <div class="section-title">時差 & 電壓</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-clock" style="color:var(--gold)"></i>時差</div>
+      <div class="info-card-body">越南比台灣<strong>慢1小時</strong><br>台灣 中午12點 = 越南 上午11點</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-bolt" style="color:var(--gold)"></i>電壓</div>
+      <div class="info-card-body">越南電壓為 <strong>220V</strong>，台灣為110V。<br>建議攜帶轉換插頭，以免損壞電器。</div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-coins"></i></div>
+      <div class="section-title">貨幣 & 匯率</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-money-bill-wave" style="color:var(--gold)"></i>越南盾（DONG）</div>
+      <div class="info-card-body">
+        1 美元 ≈ 約 20,000 盾<br>
+        1 台幣 ≈ 約 750～770 盾<br>
+        <span style="color:var(--text3);font-size:12px">※ 以當日牌告匯率為準</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-suitcase-rolling"></i></div>
+      <div class="section-title">行李限制</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-suitcase" style="color:var(--gold)"></i>行李規定</div>
+      <div class="info-card-body">
+        托運行李：可免費托運 <strong>1件，重量上限 23 公斤</strong><br>
+        手提行李：<strong>1件，重量上限 7 公斤</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+      <div class="section-title">小費參考</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-hand-holding-dollar" style="color:var(--gold)"></i>越南小費文化</div>
+      <div class="info-card-body">
+        按摩小費：約 <strong>20,000～50,000 盾／次</strong>（約 NT$27～67）<br>
+        迦南島竹船小費：約 <strong>20,000～30,000 盾／人</strong>（約 NT$27～40）<br>
+        飯店房務：約 <strong>10,000～20,000 盾／天</strong>（約 NT$14～27）<br>
+        <span style="color:var(--text3);font-size:12px">※ 小費非強制，視服務品質自行斟酌</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+      <div class="section-title">台灣海關規定</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-money-bills" style="color:var(--gold)"></i>入出境攜帶現金限額</div>
+      <div class="info-card-body">
+        外幣現金出境：不可超過 <strong>美金 1萬元</strong>（旅行支票不限）<br>
+        新台幣出境：不可超過 <strong>新台幣 10萬元</strong>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-box-open" style="color:var(--gold)"></i>入境台灣免稅規定</div>
+      <div class="info-card-body">
+        酒類：<strong>1公升</strong>以內免稅<br>
+        菸類：捲菸 <strong>200支</strong>、雪茄 <strong>25支</strong>或菸絲 <strong>1磅</strong>擇一<br>
+        其他商品：完稅價格合計不超過 <strong>新台幣 2萬元</strong>免稅<br>
+        <span style="color:var(--text3);font-size:12px">※ 超過免稅限額須主動向海關申報</span>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-ban" style="color:var(--gold)"></i>越南出境禁止攜帶</div>
+      <div class="info-card-body">
+        越南盾現金不得超過 <strong>1,500萬盾</strong><br>
+        外幣現金超過 <strong>USD 5,000</strong> 須申報<br>
+        珍稀動植物、未申報文物古董禁止出境<br>
+        <span style="color:var(--text3);font-size:12px">※ 購買仿冒品亦屬違法，請勿攜帶</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-phone"></i></div>
+      <div class="section-title">撥打電話回台灣</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-title"><i class="fa-solid fa-mobile-screen" style="color:var(--gold)"></i>撥打方式</div>
+      <div class="info-card-body">
+        市話：<strong>00 + 886 + 區域碼 + 電話號碼</strong><br>
+        手機：<strong>00 + 886 + (去0) 手機號碼</strong><br>
+        例如：0912-345-678 → 00-886-912-345-678
+      </div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+</div>
+```
 
   </div><!-- end app-body -->
 </div><!-- end app-shell -->
@@ -1998,6 +2143,217 @@ function selectMember(name) {
   if (p) document.getElementById('searchResult').innerHTML = renderMemberCard(p);
 }
 
+
+  // ── WEATHER API ──
+  const OWM_KEY = '7ed29139a04b7c8c24d8875dfe56f6b7';
+  let weatherData = null;
+
+  const weatherIconMap = {
+    '01d':'☀️','01n':'🌙','02d':'⛅','02n':'⛅',
+    '03d':'☁️','03n':'☁️','04d':'☁️','04n':'☁️',
+    '09d':'🌧️','09n':'🌧️','10d':'🌦️','10n':'🌦️',
+    '11d':'⛈️','11n':'⛈️','13d':'❄️','13n':'❄️','50d':'🌫️','50n':'🌫️'
+  };
+
+  const weatherDescMap = {
+    'clear sky':'晴天','few clouds':'少雲','scattered clouds':'多雲',
+    'broken clouds':'陰天','overcast clouds':'陰天',
+    'light rain':'小雨','moderate rain':'中雨','heavy intensity rain':'大雨',
+    'thunderstorm':'雷雨','shower rain':'陣雨','mist':'霧','haze':'霾'
+  };
+
+  // 旅遊日期對應
+  // 旅遊日期對應
+  const TRIP_DATES = {
+    1: '2026-04-25', 2: '2026-04-26', 3: '2026-04-27',
+    4: '2026-04-28', 5: '2026-04-29',
+  };
+
+  function fetchWeather() {
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=Da+Nang,VN&appid=${OWM_KEY}&units=metric&cnt=40`)
+      .then(r => r.json())
+      .then(data => {
+        weatherData = data;
+        updateWeatherWidgets(data);
+        updateWeatherMainCard(data);
+      })
+      .catch(() => {
+        document.querySelectorAll('.weather-widget').forEach(w => {
+          w.innerHTML = '<div class="weather-box"><div class="weather-loading">✕</div></div>';
+        });
+        const card = document.getElementById('wm-forecast-list');
+        if(card) card.innerHTML = '<div style="color:var(--text3);font-size:13px;text-align:center;padding:16px">⚠️ 無法載入</div>';
+      });
+  }
+
+  function getDayForecast(data, dateStr) {
+    const items = data.list.filter(item => item.dt_txt.startsWith(dateStr));
+    if(!items.length) return null;
+    const noon = items.find(i => i.dt_txt.includes('12:00')) || items[0];
+    return noon;
+  }
+
+  function updateWeatherWidgets(data) {
+    for(let day = 1; day <= 5; day++) {
+      const w = document.getElementById(`weather-day${day}`);
+      if(!w) continue;
+      const forecast = getDayForecast(data, TRIP_DATES[day]);
+      if(!forecast) {
+        w.innerHTML = '<div class="weather-box"><div class="weather-loading">—</div></div>';
+        continue;
+      }
+      const icon = weatherIconMap[forecast.weather[0].icon] || '🌤️';
+      const tempMax = Math.round(forecast.main.temp_max);
+      const tempMin = Math.round(forecast.main.temp_min);
+      w.innerHTML = `
+        <div class="weather-box">
+          <div class="weather-icon">${icon}</div>
+          <div class="weather-temp">${tempMin}°/${tempMax}°</div>
+        </div>
+      `;
+    }
+
+    // 更新總覽頁5天預報
+    for(let day = 1; day <= 5; day++) {
+      const box = document.getElementById(`ow-day${day}`);
+      if(!box) continue;
+      const fc = getDayForecast(data, TRIP_DATES[day]);
+      if(!fc) continue;
+      const icon = weatherIconMap[fc.weather[0].icon] || '🌤️';
+      const tMax = Math.round(fc.main.temp_max);
+      const tMin = Math.round(fc.main.temp_min);
+      const rain = fc.pop ? Math.round(fc.pop * 100) : 0;
+      box.querySelector('.stat-icon').textContent = icon;
+      box.querySelector('.stat-high').textContent = tMax + '°';
+      box.querySelector('.stat-low').textContent  = tMin + '°';
+      box.querySelector('.stat-rain').textContent = rain >= 10 ? rain + '%' : '';
+    }
+    const now = new Date();
+    const upEl = document.getElementById('ow-update');
+    if(upEl) upEl.textContent = `更新 ${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}`;
+  }
+
+  function updateWeatherMainCard(data) {
+    const list = document.getElementById('wm-forecast-list');
+    if(!list) return;
+
+    let html = '';
+    const dateLabels = ['4/25 六','4/26 日','4/27 一','4/28 二','4/29 三'];
+    for(let day = 1; day <= 5; day++) {
+      const forecast = getDayForecast(data, TRIP_DATES[day]);
+      if(!forecast) continue;
+      const icon = weatherIconMap[forecast.weather[0].icon] || '🌤️';
+      const tempMax = Math.round(forecast.main.temp_max);
+      const tempMin = Math.round(forecast.main.temp_min);
+      const desc = weatherDescMap[forecast.weather[0].description] || forecast.weather[0].description;
+      const humidity = forecast.main.humidity;
+      const rain = forecast.pop ? Math.round(forecast.pop * 100) : 0;
+      html += `
+        <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #F0EAD8">
+          <div style="font-size:12px;font-weight:700;color:var(--text2);min-width:52px">Day${day}<br><span style="font-weight:400;color:var(--text3)">${dateLabels[day-1]}</span></div>
+          <div style="font-size:28px;line-height:1">${icon}</div>
+          <div style="flex:1">
+            <div style="font-size:13px;font-weight:600;color:var(--text)">${desc}</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px">💧 ${humidity}%${rain>=20?` · 🌧 ${rain}%`:''}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:15px;font-weight:700;color:var(--gold-dark)">${tempMax}°</div>
+            <div style="font-size:12px;color:var(--text3)">${tempMin}°</div>
+          </div>
+        </div>`;
+    }
+    if(html) {
+      list.innerHTML = html;
+      const last = list.querySelector('div:last-child');
+      if(last) last.style.borderBottom = 'none';
+    }
+    const now = new Date();
+    const timeEl = document.getElementById('wm-time');
+    if(timeEl) timeEl.textContent = `更新：${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}`;
+  }
+
+  // ── CURRENCY CALCULATOR ──
+  let currencyMode = 'twd';
+
+  function switchCurrency(mode) {
+    currencyMode = mode;
+    ['twd','usd','vnd'].forEach(m => {
+      const btn = document.getElementById(`tab-${m}`);
+      if(!btn) return;
+      btn.style.background = m === mode ? '#C4961A' : '#FAFAF7';
+      btn.style.color = m === mode ? '#1A1410' : 'var(--text2)';
+      btn.style.borderColor = m === mode ? '#C4961A' : '#EDE3CC';
+    });
+    const input = document.getElementById('currencyInput');
+    if(!input) return;
+    if(mode === 'twd') input.placeholder = '輸入台幣金額...';
+    else if(mode === 'usd') input.placeholder = '輸入美元金額...';
+    else input.placeholder = '輸入越南盾金額...';
+    input.value = '';
+    document.getElementById('currencyResult').style.display = 'none';
+    updateKTable();
+  }
+
+  function updateKTable() {
+    const rate = parseFloat(document.getElementById('rateInput').value) || 800;
+    [5,10,50,100,200,500].forEach(k => {
+      const el = document.getElementById(`k${k}`);
+      if(el) el.textContent = Math.round(k * 1000 / rate);
+    });
+  }
+
+  function calcCurrency() {
+    const val = parseFloat(document.getElementById('currencyInput').value);
+    const rate = parseFloat(document.getElementById('rateInput').value) || 800;
+    const usdRate = parseFloat(document.getElementById('rateUsdInput').value) || 25000;
+    const result = document.getElementById('currencyResult');
+
+    if(!val || isNaN(val)) { result.style.display='none'; return; }
+    result.style.display = 'block';
+
+    let vnd, twd, kVal;
+    if(currencyMode === 'twd') {
+      vnd = Math.round(val * rate);
+      kVal = vnd / 1000;
+      result.innerHTML = `<div class="big">${vnd.toLocaleString()} 盾</div>
+        <div style="margin-top:6px;font-size:13px;color:var(--text2)">
+          = <strong style="color:var(--gold-dark)">${kVal % 1 === 0 ? kVal : kVal.toFixed(1)}K</strong>（越南K單位）
+        </div>`;
+    } else if(currencyMode === 'usd') {
+      vnd = Math.round(val * usdRate);
+      kVal = vnd / 1000;
+      twd = Math.round(vnd / rate);
+      result.innerHTML = `<div class="big">${vnd.toLocaleString()} 盾</div>
+        <div style="margin-top:6px;font-size:13px;color:var(--text2)">
+          = <strong style="color:var(--gold-dark)">${kVal % 1 === 0 ? kVal : kVal.toFixed(1)}K</strong>
+          ≈ NT$${twd.toLocaleString()}
+        </div>`;
+    } else {
+      twd = Math.round(val / rate);
+      kVal = val / 1000;
+      result.innerHTML = `<div class="big">NT$ ${twd.toLocaleString()}</div>
+        <div style="margin-top:6px;font-size:13px;color:var(--text2)">
+          ${kVal >= 1 ? `= <strong style="color:var(--gold-dark)">${kVal % 1 === 0 ? kVal : kVal.toFixed(1)}K</strong>` : ''}
+        </div>`;
+    }
+    updateKTable();
+  }
+
+  // 初始化
+  document.addEventListener('DOMContentLoaded', () => {
+    fetchWeather();
+    updateKTable();
+    // 每10分鐘更新一次天氣
+    setInterval(fetchWeather, 600000);
+    // 匯率輸入時更新K表
+    document.getElementById('rateInput').addEventListener('input', () => {
+      updateKTable();
+      calcCurrency();
+    });
+    document.getElementById('rateUsdInput').addEventListener('input', calcCurrency);
+  });
+
 </script>
+
 </body>
 </html>
